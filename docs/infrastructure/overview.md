@@ -8,6 +8,7 @@ Infrastructure pages define server roles, worker boundaries, permissions, and ba
 :maxdepth: 1
 
 architecture
+../analysis/database_structure
 worker_population
 permissions
 backups

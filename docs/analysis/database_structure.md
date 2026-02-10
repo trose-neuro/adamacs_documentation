@@ -7,7 +7,7 @@ For table-by-table, user-facing chapters, see:
 
 ## Why this chapter exists
 
-In the Moser-style pipeline philosophy, schema diagrams are operational documents.
+In the ADAMACS pipeline philosophy, schema diagrams are operational documents.
 They tell you:
 - what is allowed to depend on what
 - where provenance boundaries are
@@ -126,7 +126,7 @@ Start most joins from these anchors:
 For event/trial-specific structure, see:
 - `Ingest -> Event/Trial Ontology`
 
-## Moser-style guardrails for analysis code
+## Guardrails for analysis code
 
 - Keep key restrictions explicit in each notebook section.
 - Treat label vocabularies (`event.EventType`, `trial.TrialType`) as shared contracts.

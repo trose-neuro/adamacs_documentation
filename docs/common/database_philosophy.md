@@ -19,9 +19,9 @@ The operating conditions are:
 
 Without a strict dependency graph and machine-readable keys, this system becomes un-auditable and non-reproducible.
 
-## Moser-style principles (adapted)
+## Operational principles (adapted)
 
-The philosophy inherited from the Moser pipeline lineage can be summarized as:
+The philosophy used in ADAMACS can be summarized as:
 
 1. Ontology before algorithms
    - Define experimental structure (`session`, `scan`, `trial`, `event`) before feature extraction.

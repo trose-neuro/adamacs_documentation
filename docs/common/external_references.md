@@ -41,8 +41,3 @@ Use this page when you need implementation details from upstream projects behind
 
 - CASCADE source code and README: <https://github.com/HelmchenLabSoftware/Cascade>
 - ADAMACS operations policy: `Common -> Lab Operations Playbook` (CASCADE workflow policy)
-
-## Reference pipeline philosophy
-
-- Moser pipelines docs: <https://moser-pipelines.readthedocs.io/en/latest/>
-- Moser pipeline components overview: <https://moser-pipelines.readthedocs.io/en/latest/technical/contributing.html#components-of-the-pipeline>

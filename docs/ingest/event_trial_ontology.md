@@ -4,7 +4,7 @@ This page adapts the DataJoint Element Event ontology to ADAMACS usage.
 
 Reference: [Element Event concepts](https://docs.datajoint.com/elements/element-event/0.2/concepts/).
 
-## Moser-style mindset (adapted to ADAMACS)
+## Ontology-first mindset for ADAMACS
 
 The core idea is simple: define time ontology first, then run analysis.
 
@@ -58,7 +58,7 @@ Interpretation:
 
 ## Procedure labels in ADAMACS
 
-In the legacy Moser-style philosophy, procedures are part of the experimental grammar, not free text.
+In ADAMACS, procedures are part of the experimental grammar, not free text.
 ADAMACS mirrors this with two practical layers:
 
 - session-bound procedure context:

@@ -51,5 +51,3 @@ schemas/disk
 - DeepLabCut docs: <https://deeplabcut.github.io/DeepLabCut/>
 - DISK source: <https://github.com/bozeklab/DISK>
 - CASCADE source: <https://github.com/HelmchenLabSoftware/Cascade>
-- Reference pipeline docs: <https://moser-pipelines.readthedocs.io/en/latest/>
-- Reference pipeline components page: <https://moser-pipelines.readthedocs.io/en/latest/technical/contributing.html#components-of-the-pipeline>

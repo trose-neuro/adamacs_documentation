@@ -2,6 +2,7 @@
 
 This site is the operational and analysis manual for ADAMACS.
 Use the section hubs below for fast navigation.
+ADAMACS is informed by the Moser pipeline lineage, but all pages here use ADAMACS-specific terminology and workflows.
 
 ```{toctree}
 :maxdepth: 2
