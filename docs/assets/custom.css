@@ -1,0 +1,18 @@
+/* Wider content area so architecture diagrams can render larger. */
+.wy-nav-content {
+  max-width: 1500px;
+}
+
+/* Increase size and readability of Mermaid visualizations globally. */
+.mermaid {
+  font-size: 20px;
+  overflow-x: auto;
+}
+
+.mermaid svg {
+  width: 100% !important;
+  max-width: 1500px !important;
+  height: auto !important;
+  display: block;
+  margin: 0 auto;
+}
