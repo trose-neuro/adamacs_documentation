@@ -172,6 +172,72 @@ Example:
   XX_ANM-2172_2026-02-10_sess9FY6AIRM/scan9FY6AIRM/
 ```
 
+## ID token structure (`sessid`, `scanid`, `expid`)
+
+This is the practical ID grammar used by ingest/path parsing.
+These IDs are token strings carried through folder names and DataJoint keys.
+
+Important:
+- these are **not** cryptographic hashes
+- do not rewrite existing IDs after data is ingested
+- treat them as stable opaque identifiers
+
+### Token prefixes and expected shapes
+
+| Concept | Prefix in filenames | Parser expectation in current code | Typical payload |
+| --- | --- | --- | --- |
+| Session token | `sess...` | regex extraction of `sess` token from folder string | 8-character base36-like token |
+| Scan token | `scan...` | scan token parsed from folder names; scan ingest expects an 8-character scan payload | 8-character base36-like token |
+| Suite2p experiment token | `exp...` (inside `suite2p_exp...`) | Suite2p helper writes output folders as `suite2p_exp<token>` | usually matches scan token payload |
+
+### Example mapping
+
+```text
+Folder: XX_ANM-2172_2026-02-10_scan9FY6AIRM_sess9FY6AIRM
+  session_id = sess9FY6AIRM
+  scan_id    = scan9FY6AIRM
+  expid      = 9FY6AIRM   (in paths such as suite2p_exp9FY6AIRM)
+```
+
+### What the 8-character payload is
+
+In current helper code, these payloads are handled as base36-like IDs and can be converted to timestamps in legacy utility code.
+Operationally, this means:
+- the token is time-derived in origin
+- it is used as the stable key payload
+- it should be treated as an ID, not as a value to recompute later
+
+### Implementation pointers (for maintainers)
+
+- Session token extraction: `adamacs/helpers/adamacs_ingest_v2.py` (`get_session_key_from_dir`)
+- Scan token extraction: `adamacs/helpers/adamacs_ingest_v2.py` (`get_scan_key_from_dir`)
+- Scan ingest expectation: `adamacs/ingest/session.py` (`scan_pattern = "scan.{8}"`)
+- Suite2p `expid` folder naming: `adamacs/helpers/s2p_helpers.py` (`suite2p_exp...`)
+- Legacy base36-to-datetime helper: `adamacs/helpers/stack_helpers.py` (`convert_id_to_datetime`)
+
+## External references (pipeline components)
+
+Use these when you need implementation details beyond ADAMACS-specific wrappers.
+
+### DataJoint and Elements
+
+- DataJoint core docs: <https://docs.datajoint.com/core/datajoint-python/latest/>
+- DataJoint Elements index: <https://docs.datajoint.com/elements/>
+- Element Calcium Imaging: <https://docs.datajoint.com/elements/element-calcium-imaging/latest/>
+- Element DeepLabCut: <https://docs.datajoint.com/elements/element-deeplabcut/latest/>
+- Element Event concepts: <https://docs.datajoint.com/elements/element-event/0.2/concepts/>
+
+### Processing/model toolchains
+
+- Suite2p docs: <https://suite2p.readthedocs.io/en/latest/>
+- Suite2p parameters: <https://suite2p.readthedocs.io/en/latest/parameters/>
+- Suite2p inputs/outputs: <https://suite2p.readthedocs.io/en/latest/inputs/>, <https://suite2p.readthedocs.io/en/latest/outputs/>
+- Suite2p source: <https://github.com/MouseLand/suite2p>
+- DISK source: <https://github.com/bozeklab/DISK>
+- CASCADE source: <https://github.com/HelmchenLabSoftware/Cascade>
+- DeepLabCut docs: <https://deeplabcut.github.io/DeepLabCut/>
+- DeepLabCut source: <https://github.com/DeepLabCut/DeepLabCut>
+
 ## ASCII interaction sketch
 
 ```text

@@ -46,6 +46,7 @@ Check:
 - naming convention contains expected `sess...` and `scan...` tokens
 - folder exists under configured root dirs
 - `imaging_root_data_dir` points to correct path
+- token grammar matches `Infrastructure -> Architecture -> ID token structure`
 
 ### `scan.ScanInfo.populate()` fails
 

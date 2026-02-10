@@ -1,24 +1,12 @@
 # Getting Started
 
-This page gives you the shortest reliable path from zero setup to productive ingest + analysis work.
+This page is the shortest path from zero setup to first successful ingest + first analysis query.
 
-## 1) Understand the repository split
+## 1. Clone repositories side-by-side
 
-ADAMACS is now best used as two working repositories:
-
-- `adamacs_ingest`
-  - ingest-first repository
-  - pipeline definitions, ingest code, task insertion, GUI, batch ingest templates
-- `adamacs_analysis`
-  - analysis-first student repository
-  - querying, plotting, exploratory notebooks, analysis helper code
-
-Operationally:
-- ingest and heavy population tasks are centered in `adamacs_ingest`
-- project-specific analysis should mostly happen in `adamacs_analysis` (easy to fork)
-- students should normally use `adamacs_ingest` directly (no mandatory fork) and contribute improvements via PRs to main
-
-## 2) Clone repos side-by-side
+ADAMACS is used as two repos:
+- `adamacs_ingest` (ingest/task staging)
+- `adamacs_analysis` (querying/analysis notebooks)
 
 ```bash
 cd /path/to/workspace
@@ -26,21 +14,20 @@ git clone https://github.com/your-org/adamacs_ingest.git
 git clone https://github.com/your-org/adamacs_analysis.git
 ```
 
-(If your organization host differs, replace remotes accordingly.)
+## 2. Install environment
 
-## 3) Install the analysis environment (recommended first)
-
-From `adamacs_analysis`:
+Recommended:
 
 ```bash
+cd /path/to/workspace/adamacs_analysis
 ./scripts/install_datajoint_analysis.sh
 ```
 
-This installs a pinned DataJoint pre-2.0 stack and installs both repos in editable mode.
+For detailed install options, use `Common -> Environment Setup`.
 
-## 4) Configure local DataJoint credentials
+## 3. Create local DataJoint config
 
-Create local, untracked config files (details in `dj_local_conf` page):
+Create local config files:
 
 ```bash
 cd /path/to/workspace/adamacs_ingest
@@ -50,53 +37,42 @@ cd /path/to/workspace/adamacs_analysis
 cp Example_dj_local_conf.json dj_local_conf.json
 ```
 
-Edit host/user/password/path fields for your account.
+Then set host/user/password/path values for your account.
+Reference: `Common -> dj_local_conf`.
 
-## 5) First connection test
+## 4. Verify DB connection
 
-In any Python shell (inside your configured environment):
+In your configured environment:
 
 ```python
 import datajoint as dj
-
 dj.conn()
 print("Connected")
 ```
 
-If this fails, go directly to `Common -> Troubleshooting`.
+If this fails: `Common -> Troubleshooting`.
 
-## 6) First ingest run
+## 5. Do first ingest + first analysis check
 
-Use the ingest GUI entrypoint:
+First ingest:
 
 ```python
 from adamacs.gui import select_sessions
-
 select_sessions(["XX_ANM-0000_2026-01-01_sessXXXX_scanXXXX"])
 ```
 
-You will normally:
-- ingest metadata and insert task rows
-- let workers pick up heavy jobs
+Then open analysis notebook:
+- `adamacs_analysis/notebooks/01_querying_guide.ipynb`
 
-## 7) First analysis run
+## Workflow rules
 
-From `adamacs_analysis`, open notebook:
-- `notebooks/01_querying_guide.ipynb`
-
-Then validate a simple query (for example by subject/session filter) before scaling up.
-
-## Standard student workflow
-
-1. Upload/consolidate data to server share.
-2. Use ingest GUI to register sessions/scans and create task rows.
-3. Wait for worker-managed heavy populations.
-4. Analyze results in `adamacs_analysis` notebooks.
-5. Commit analysis code in your branch/fork and open PR.
+- Stage ingest/task rows from GUI.
+- Let workers run heavy populations.
+- Analyze in `adamacs_analysis`.
 
 ## What to read next
 
-- `Common -> Environment Setup`
+- `Ingest -> Overview`
 - `Ingest -> GUI Workflow`
-- `Infrastructure -> Worker-Owned Population`
 - `Analysis -> Overview`
+- `Infrastructure -> Worker-Owned Population`

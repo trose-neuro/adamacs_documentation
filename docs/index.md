@@ -1,24 +1,13 @@
 # Welcome to ADAMACS documentation
 
-This site is the operational and analysis manual for the ADAMACS ecosystem:
-- `adamacs_ingest`: ingest + population workflows
-- `adamacs_analysis`: analysis + notebook workflows
-- lab infrastructure around DataJoint, worker processes, blob storage, and backups
-
-The structure below follows a multi-section documentation pattern similar to mature pipeline docs (separate common, workflow, and developer tracks).
+This site is the operational and analysis manual for ADAMACS.
+Use the section hubs below for fast navigation.
 
 ```{toctree}
 :maxdepth: 2
 :caption: Common
 
-common/getting_started
-common/database_philosophy
-common/lab_operations_playbook
-common/environment_setup
-common/dj_local_conf
-common/servers_access
-common/troubleshooting
-common/glossary
+common/overview
 ```
 
 ```{toctree}
@@ -26,11 +15,6 @@ common/glossary
 :caption: Ingest
 
 ingest/overview
-ingest/gui_workflow
-ingest/event_trial_ontology
-ingest/batch_ingest
-ingest/modalities
-ingest/notebook_map
 ```
 
 ```{toctree}
@@ -38,40 +22,28 @@ ingest/notebook_map
 :caption: Analysis
 
 analysis/overview
-analysis/database_structure
-analysis/schema_chapters
-analysis/notebook_map
-analysis/query_patterns
-analysis/schema_scaffolding
-analysis/gaze_pose_imaging
 ```
 
 ```{toctree}
 :maxdepth: 2
 :caption: Infrastructure
 
-infrastructure/architecture
-infrastructure/worker_population
-infrastructure/backups
-infrastructure/permissions
-infrastructure/slack_post_template
+infrastructure/overview
 ```
 
 ```{toctree}
 :maxdepth: 2
 :caption: Developer Documentation
 
-developer/repo_split
-developer/deploy_private_repository
-developer/contributing
-developer/docs_maintenance
+developer/overview
 ```
 
-## Intended audiences
+## Quick paths
 
-- Students: start with `Common -> Getting Started`, then `Ingest -> GUI workflow` and `Analysis -> overview`.
-- Advanced analysts: start with `Analysis -> query patterns` and `Infrastructure -> worker population`.
-- Operators/admins: start with `Infrastructure` and `Developer Documentation`.
+- New users: `Common -> Getting Started`
+- Ingest users: `Ingest -> GUI Workflow`
+- Analysis users: `Analysis -> Overview`
+- Operators/admins: `Infrastructure -> Overview`
 
 ## Current infra snapshot (as documented)
 

@@ -4,6 +4,14 @@
 
 ## Start here
 
+```{toctree}
+:maxdepth: 1
+
+gui_workflow
+```
+
+## Primary entrypoint
+
 Use `ingestgui_v2` first:
 - notebook: `adamacs_ingest/notebooks/00_ingest_gui_workflow_adamacs_ingest_v2.ipynb`
 - helper: `adamacs.helpers.adamacs_ingest_v2.select_sessions(...)`
@@ -31,7 +39,11 @@ Use `ingestgui_v2` first:
 
 ## Related pages
 
-- `Ingest -> GUI Workflow`
-- `Ingest -> Event/Trial Ontology`
-- `Ingest -> Batch Ingest`
-- `Infrastructure -> Worker-Owned Population`
+```{toctree}
+:maxdepth: 1
+
+event_trial_ontology
+batch_ingest
+modalities
+notebook_map
+```

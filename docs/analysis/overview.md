@@ -2,6 +2,15 @@
 
 `adamacs_analysis` is the student-facing analysis workspace split from ingest operations.
 
+## Start here
+
+```{toctree}
+:maxdepth: 1
+
+query_patterns
+schema_chapters
+```
+
 ## Analysis philosophy
 
 - Keep ingest/pipeline mutation in `adamacs_ingest`.
@@ -45,9 +54,11 @@ For every analysis figure/table, preserve:
 
 ## Related pages
 
-- `Analysis -> Database Structure`
-- `Analysis -> Schema Chapters (User-Focused)`
-- `Analysis -> Notebook Map`
-- `Analysis -> Query Patterns`
-- `Analysis -> Schema Scaffolding`
-- `Infrastructure -> Worker-Owned Population`
+```{toctree}
+:maxdepth: 1
+
+database_structure
+notebook_map
+schema_scaffolding
+gaze_pose_imaging
+```
