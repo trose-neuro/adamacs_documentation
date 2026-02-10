@@ -101,31 +101,14 @@ Manual user populations can fail with filesystem permission errors even when DB 
 
 ## Event/trial ontology (ADAMACS-specific)
 
-Element Event is organized as `Session -> Recording -> Event/Trial/Block`.
-Reference ontology: [Element Event concepts](https://docs.datajoint.com/elements/element-event/0.2/concepts/).
-In ADAMACS, this maps to:
+Use the dedicated page:
+- `Ingest -> Event/Trial Ontology`
 
-| Ontology level | ADAMACS table(s) | Practical meaning |
-| --- | --- | --- |
-| Session | `session.Session` | One experimental session |
-| Recording | `event.BehaviorRecording`, `event.BehaviorRecording.File` | One behavior recording source + files |
-| Event type vocabulary | `event.EventType` | Names like `aux_cam`, `optitrack_frames`, `raw_bpod_*` |
-| Event instances | `event.Event` | Timestamped events (`event_start_time`, optional `event_end_time`) |
-| Trial type vocabulary | `trial.TrialType` | Trial category labels |
-| Trial instances | `trial.Trial` | Trial windows (`trial_start_time`, `trial_stop_time`) |
-| Event-to-trial mapping | `trial.TrialEvent` | Which events belong to which trials |
-
-Quick checks used in this lab:
-
-```python
-# Camera sync events before and after behavior epoch
-(event.Event() & "event_type='aux_cam'" & 'event_start_time < "100"' & scan_key)
-(event.Event() & "event_type='aux_cam'" & 'event_start_time > "1000"' & scan_key)
-
-# Trials and trial-linked events
-(trial.Trial & scan_key)
-(trial.TrialEvent & scan_key)
-```
+It contains:
+- ADAMACS table mapping for `event.*` and `trial.*`
+- ASCII timeline
+- graph visualization
+- quick validation queries
 
 ## 6) Aux data ingest (HARP, treadmill, camera sync)
 

@@ -32,5 +32,6 @@ Use `ingestgui_v2` first:
 ## Related pages
 
 - `Ingest -> GUI Workflow`
+- `Ingest -> Event/Trial Ontology`
 - `Ingest -> Batch Ingest`
 - `Infrastructure -> Worker-Owned Population`

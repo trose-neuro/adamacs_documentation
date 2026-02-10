@@ -27,6 +27,7 @@ common/glossary
 
 ingest/overview
 ingest/gui_workflow
+ingest/event_trial_ontology
 ingest/batch_ingest
 ingest/modalities
 ingest/notebook_map

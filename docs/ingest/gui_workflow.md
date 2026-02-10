@@ -85,3 +85,8 @@ For sync sanity checks:
 Defaults are read from `user_configs/<initials>.ini`.
 
 ![User defaults INI](../assets/ingest/ingestgui_v2_user_defaults_ini.png)
+
+## Related pages
+
+- `Ingest -> Event/Trial Ontology`
+- `Ingest -> Modalities`
