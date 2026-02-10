@@ -22,8 +22,8 @@ Operationally:
 
 ```bash
 cd /path/to/workspace
-git clone https://github.com/SFB1089/adamacs_ingest.git
-git clone https://github.com/SFB1089/adamacs_analysis.git
+git clone https://github.com/your-org/adamacs_ingest.git
+git clone https://github.com/your-org/adamacs_analysis.git
 ```
 
 (If your organization host differs, replace remotes accordingly.)
@@ -72,7 +72,7 @@ Use the ingest GUI entrypoint:
 ```python
 from adamacs.gui import select_sessions
 
-select_sessions(["TR_ROS-0000_2026-01-01_sessXXXX_scanXXXX"])
+select_sessions(["XX_ANM-0000_2026-01-01_sessXXXX_scanXXXX"])
 ```
 
 You will normally:

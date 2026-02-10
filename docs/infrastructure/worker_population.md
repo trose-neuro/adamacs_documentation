@@ -22,7 +22,7 @@ Example error:
 
 ## Current worker-managed populations
 
-### TATCHU CPU worker loop
+### MAIN_SERVER CPU worker loop
 
 - `imaging.Processing.populate(...)`
 - `imaging.Curation().create1_from_processing_task(...)` (curation task creation)
@@ -34,14 +34,14 @@ Example error:
 - `mocap.MocapRecordingInfo.populate(...)`
 - `mocap.MotionCapture.populate(...)`
 
-### ibehaveGPU1 worker loops
+### GPU_SERVER worker loops
 
 - `model.RecordingInfoNew.populate(...)`
 - `model.PoseEstimationNew.populate(...)`
 - `denoising.Denoising.populate(...)`
 - dedicated cascade/activity listener deployments can run `imaging.Activity.populate(...)` for queued cascade tasks
 
-### LOKI
+### BACKUP_SERVER
 
 - no active autopopulate loops documented
 - backup-only role

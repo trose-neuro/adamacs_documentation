@@ -22,7 +22,7 @@ Both repos ship `Example_dj_local_conf.json` templates.
   "database.port": 3306,
   "database.use_tls": false,
   "custom": {
-    "database.prefix": "roselab_",
+    "database.prefix": "lab_",
     "imaging_root_data_dir": ["/datajoint-data/data/your_username"],
     "exp_root_data_dir": ["/datajoint-data/data/your_username"],
     "dlc_root_data_dir": ["/datajoint-data/data/your_username"]

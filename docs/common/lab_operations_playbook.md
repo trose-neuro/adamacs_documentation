@@ -15,7 +15,7 @@ Personal credentials, personal contact details, and private account specifics ar
 This playbook was cross-checked against:
 - lab-provided workflow notes in this documentation project context
 - repository code paths (`adamacs` ingest/helpers/schemas)
-- `troselab/SOPs` server scripts and markdown references
+- `your-org/SOPs` server scripts and markdown references
 
 Note:
 - some external note-sharing links are JS-rendered and may not be machine-readable in headless fetch contexts; in that case, only verifiable content from accessible sources is promoted to canonical docs.
@@ -72,7 +72,7 @@ SHORTHAND;PURPOSE;VIDEOKEY
 Example:
 
 ```text
-NK;TopTrackingNoScope;top_video*.mp4
+XX;TopTrackingNoScope;top_video*.mp4
 ```
 
 This naming convention is important for reproducibility and unambiguous model selection.
@@ -92,7 +92,7 @@ Environment synchronization note for CASCADE-enabled workflows:
 
 ```bash
 pip uninstall element-calcium-imaging
-pip install git+https://github.com/SFB1089/element-calcium-imaging.git@main
+pip install git+https://github.com/your-org/element-calcium-imaging.git@main
 ```
 
 Also ensure local `adamacs` code is up to date before task insertion.
@@ -111,8 +111,8 @@ ROOT/
 ```
 
 Examples:
-- `TR_ROS-999/2022-12-12_craniotomy`
-- `TR_ROS-999/2023-01-01_mini2p1_sessABC123`
+- `XX_ANM-999/2022-12-12_craniotomy`
+- `XX_ANM-999/2023-01-01_mini2p1_sessABC123`
 
 Guideline:
 - Date-bound entries should always use the date-prefixed format.

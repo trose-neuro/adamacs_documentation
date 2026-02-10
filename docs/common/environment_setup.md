@@ -56,7 +56,7 @@ conda run -n datajoint_analysis python -m pip install -e ".[notebooks]"
 In some environments you may need:
 
 ```bash
-python -m pip install --no-deps "pywavesurfer @ git+https://github.com/SFB1089/PyWaveSurfer.git"
+python -m pip install --no-deps "pywavesurfer @ git+https://github.com/your-org/PyWaveSurfer.git"
 python -m pip install scanimage-tiff-reader==1.4.1.4
 ```
 

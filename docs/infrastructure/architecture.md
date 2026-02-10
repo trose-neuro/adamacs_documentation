@@ -4,15 +4,15 @@ This is the current documented ADAMACS lab architecture for ingest and analysis 
 
 ## Server roles and IPs
 
-- `TATCHU3` (`172.25.64.3`)
+- `MAIN_SERVER` (`172.25.64.3`)
   - main DataJoint DB host
   - blob storage host
   - shared data upload host
   - CPU-side worker host
-- `ibehaveGPU1` (`172.25.70.3`)
+- `GPU_SERVER` (`172.25.70.3`)
   - GPU worker host (DLC/model-heavy/denoising and related jobs)
   - model training and evaluation host (including MEI candidate generation/evaluation workflows)
-- `LOKI` (`172.26.65.8`)
+- `BACKUP_SERVER` (`172.26.65.8`)
   - backup host (pull backups + borg compression)
 
 Legacy note:
@@ -42,7 +42,7 @@ flowchart TB
       S_H2["behavior2"]
     end
 
-    subgraph TATCHU["TATCHU3 172.25.64.3"]
+    subgraph MAIN_SERVER["MAIN_SERVER 172.25.64.3"]
       SHARE["SMB/Linux share /datajoint-data/data/<user>"]
       CONS["Consolidation and naming"]
       ING["adamacs_ingest GUI and ingest notebooks"]
@@ -54,14 +54,14 @@ flowchart TB
       ANA["adamacs_analysis users and notebooks"]
     end
 
-    subgraph GPU["ibehaveGPU1 172.25.70.3"]
+    subgraph GPU["GPU_SERVER 172.25.70.3"]
       GPUW["GPU worker loops (DLC/denoise/cascade)"]
       TRAIN["Model training pipelines"]
       EVAL["Model evaluation and MEI candidate scoring"]
     end
 
-    subgraph BACKUP["LOKI 172.26.65.8"]
-      RSYNC["Pull jobs (rsync from TATCHU)"]
+    subgraph BACKUP["BACKUP_SERVER 172.26.65.8"]
+      RSYNC["Pull jobs (rsync from MAIN_SERVER)"]
       BORG["Borg archives zstd,22"]
     end
 
@@ -116,7 +116,7 @@ flowchart TB
 
 ### Closed-loop note
 
-The `ibehaveGPU1` model training/evaluation path feeds MEI candidate stimuli back to `bench2p1` for re-stimulation experiments, and those new recordings re-enter the same ingest pipeline.
+The `GPU_SERVER` model training/evaluation path feeds MEI candidate stimuli back to `bench2p1` for re-stimulation experiments, and those new recordings re-enter the same ingest pipeline.
 
 ## Directory structure and file naming convention visualization
 
@@ -126,8 +126,8 @@ flowchart TB
     SESS["<INITIALS>_<ANIMALID>_<YYYY-MM-DD>_sess<SESSIONID>"]
     SCAN["scan<SCANID>"]
     RAW["Raw files (.tif/.mp4/.tak/.csv/.json etc.)"]
-    TOK1["Token: initials (for example TR, NK)"]
-    TOK2["Token: animal ID (for example ROS-2172)"]
+    TOK1["Token: initials (for example XX, YY)"]
+    TOK2["Token: animal ID (for example ANM-2172)"]
     TOK3["Token: date (ISO YYYY-MM-DD)"]
     TOK4["Token: session id (sess...)"]
     TOK5["Token: scan id (scan...)"]
@@ -169,7 +169,7 @@ Scan folder token convention:
   scan<SCANID>
 
 Example:
-  TR_ROS-2172_2026-02-10_sess9FY6AIRM/scan9FY6AIRM/
+  XX_ANM-2172_2026-02-10_sess9FY6AIRM/scan9FY6AIRM/
 ```
 
 ## ASCII interaction sketch
@@ -181,7 +181,7 @@ Example:
       [consolidated session folder]
                 |
                 v
-   [TATCHU share /datajoint-data/data/<user>]
+   [MAIN_SERVER share /datajoint-data/data/<user>]
                 |
                 v
         [adamacs_ingest GUI/notebooks]
@@ -189,17 +189,17 @@ Example:
      +----------+-------------+
      |                        |
      v                        v
-[DataJoint DB on TATCHU]   [RSpace optional]
+[DataJoint DB on MAIN_SERVER]   [RSpace optional]
      |
      +--> [*Task tables]
      |
-     +--> [TATCHU CPU workers] ----+
+     +--> [MAIN_SERVER CPU workers] ----+
      |                              |
-     +--> [ibehaveGPU GPU workers] -+--> [/datajoint-db/blobs/...]
+     +--> [GPU_SERVER GPU workers] -+--> [/datajoint-db/blobs/...]
      |
      +--> [DB dumps]
 
-[/datajoint-data + blobs + DB dumps] --> [LOKI pull backups] --> [borg zstd,22]
+[/datajoint-data + blobs + DB dumps] --> [BACKUP_SERVER pull backups] --> [borg zstd,22]
 ```
 
 ## Operational boundaries

@@ -31,7 +31,7 @@ flowchart TB
       H2["behavior2"]
     end
 
-    subgraph TATCHU["TATCHU3 (172.25.64.3)"]
+    subgraph MAIN_SERVER["MAIN_SERVER (172.25.64.3)"]
       SHARE["/datajoint-data/data/<user>"]
       ING["adamacs_ingest GUI + batch ingest"]
       DB["DataJoint DB"]
@@ -40,12 +40,12 @@ flowchart TB
       DUMP["DB dump outputs"]
     end
 
-    subgraph GPU["ibehaveGPU1 (172.25.70.3)"]
+    subgraph GPU["GPU_SERVER (172.25.70.3)"]
       GPUW["GPU worker loops"]
       TRAIN["Model training + evaluation"]
     end
 
-    subgraph LOKI["LOKI (172.26.65.8)"]
+    subgraph BACKUP_SERVER["BACKUP_SERVER (172.26.65.8)"]
       RSYNC["Pull backups"]
       BORG["borg zstd,22 archives"]
     end
@@ -130,8 +130,8 @@ If server topology or worker scripts change, update:
 ## Private deployment target
 
 Target hosting model:
-- private repository under GitHub org `troselab`
+- private repository under GitHub org `your-org`
 - optional private Read the Docs deployment
 
 Deployment runbook:
-- `docs/developer/deploy_private_troselab.md`
+- `docs/developer/deploy_private_repository.md`

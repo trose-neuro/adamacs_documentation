@@ -1,7 +1,7 @@
 # Database Philosophy
 
 This page rewrites the database philosophy for ADAMACS using two sources of design logic:
-- Moser pipeline documentation (why their lab uses this style of database pipeline)
+- reference pipeline documentation (why labs use this style of database pipeline)
 - DataJoint documentation and architecture principles
 
 The goal is not generic "good database practice". The goal is to explain why this approach is necessary for **our specific experimental complexity**.
@@ -19,9 +19,9 @@ The operating conditions are:
 
 Without a strict dependency graph and machine-readable keys, this system becomes un-auditable and non-reproducible.
 
-## Moser-style reasons (rewritten for ADAMACS)
+## Reference-Pipeline Reasons (rewritten for ADAMACS)
 
-Moser pipeline docs emphasize that database pipelines are needed to manage large and complex table networks, support multiple user roles, and make it possible to extend workflows to new hardware/data types while preserving structure.
+Reference pipeline docs emphasize that database pipelines are needed to manage large and complex table networks, support multiple user roles, and make it possible to extend workflows to new hardware/data types while preserving structure.
 
 In ADAMACS terms, this means:
 
@@ -84,7 +84,7 @@ ADAMACS now includes closed-loop paths where model outputs affect future acquisi
 Example loop:
 1. ingest multimodal data
 2. worker pipelines produce aligned features
-3. `ibehaveGPU1` runs model training and evaluation (including MEI candidate scoring)
+3. `GPU_SERVER` runs model training and evaluation (including MEI candidate scoring)
 4. evaluated candidates feed stimulation design for `bench2p1`
 5. new recordings are produced
 6. those recordings re-enter ingest and are versioned in the same dependency graph
@@ -119,10 +119,6 @@ not just a place to "store data".
 
 ## References
 
-- Moser pipelines docs (structure and rationale):
-  - https://moser-pipelines.readthedocs.io/en/latest/index.html
-  - https://moser-pipelines.readthedocs.io/en/latest/common/getting_started/index.html
-  - https://moser-pipelines.readthedocs.io/en/latest/common/building_your_own.html
 - DataJoint docs and architecture:
   - https://docs.datajoint.com/core/datajoint-python/latest/design/tables/dependencies/
   - https://docs.datajoint.com/core/datajoint-python/latest/query/operators/

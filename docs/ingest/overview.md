@@ -1,70 +1,36 @@
 # Ingest Overview
 
-`adamacs_ingest` is the central operational entrypoint for data onboarding into ADAMACS.
+`adamacs_ingest` is where you register new sessions and create processing tasks.
 
-## Core principle
+## Start here
 
-Students should ingest metadata and create tasks.
-Workers should perform most heavy populations.
+Use `ingestgui_v2` first:
+- notebook: `adamacs_ingest/notebooks/00_ingest_gui_workflow_adamacs_ingest_v2.ipynb`
+- helper: `adamacs.helpers.adamacs_ingest_v2.select_sessions(...)`
 
-This prevents:
-- duplicate compute
-- filesystem permission collisions on blob-backed outputs
-- inconsistent ownership of long-running jobs
+## Golden rules
 
-## High-level ingest flow
+- Ingest metadata and insert tasks from the GUI.
+- Keep `do_population=False` during normal user ingest.
+- Let workers handle heavy compute tables.
 
-```{mermaid}
-flowchart LR
-    A[Acquisition setup output] --> B[Consolidated session folder]
-    B --> C[Upload to TATCHU share]
-    C --> D[Ingest GUI or ingest notebook]
-    D --> E[Session and scan metadata tables]
-    D --> F[*Task tables]
-    F --> G[Server workers populate]
-    G --> H[Computed tables and file blobs]
-    H --> I[Analysis notebooks]
-```
-
-## What lives in ingest repository
-
-- DataJoint pipeline activation (`adamacs/pipeline.py`)
-- schema declarations (`adamacs/schemas/*`)
-- ingest logic (`adamacs/ingest/*`)
-- ingest GUI (`adamacs.gui.select_sessions`)
-- ingest and operator notebooks
-- batch ingest templates
-
-## Ingest source directory conventions
-
-Configured via:
-- `custom.imaging_root_data_dir`
-- `custom.exp_root_data_dir`
-- `custom.dlc_root_data_dir`
-
-Typical lab path:
-- `/datajoint-data/data/<username>`
-
-## Rule of thumb for populations
-
-- If a workflow has a `*Task` table, insert the task and let workers pick it up.
-- Run manual populations primarily for lightweight ingest-side computed tables.
-
-Detailed ownership table:
-- `Infrastructure -> Worker-Owned Population`
-
-## First practical steps
+## Typical flow
 
 1. Confirm `dj_local_conf.json` paths and credentials.
-2. Open ingest GUI workflow notebook.
-3. Select sessions and verify parsed session/scan IDs.
+2. Open `00_ingest_gui_workflow_adamacs_ingest_v2.ipynb`.
+3. Select sessions in the GUI and check key fields.
 4. Commit ingest metadata and tasks.
-5. Monitor worker completion.
-6. Hand off to analysis.
+5. Verify task rows exist.
+6. Continue in analysis notebooks.
+
+## Path settings used by ingest
+
+- `custom.exp_root_data_dir`
+- `custom.imaging_root_data_dir`
+- `custom.dlc_root_data_dir`
 
 ## Related pages
 
 - `Ingest -> GUI Workflow`
 - `Ingest -> Batch Ingest`
-- `Ingest -> Modalities`
-- `Infrastructure -> Permissions and Ownership`
+- `Infrastructure -> Worker-Owned Population`

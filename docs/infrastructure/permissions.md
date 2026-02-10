@@ -66,7 +66,7 @@ Look for:
 ## Database grant example (admin-only)
 
 ```sql
-GRANT SELECT, INSERT, CREATE, UPDATE ON `roselab_%`.* TO 'username'@'%';
+GRANT SELECT, INSERT, CREATE, UPDATE ON `lab_%`.* TO 'username'@'%';
 ```
 
 This does **not** configure Linux filesystem write access.

@@ -59,7 +59,7 @@ infrastructure/slack_post_template
 :caption: Developer Documentation
 
 developer/repo_split
-developer/deploy_private_troselab
+developer/deploy_private_repository
 developer/contributing
 developer/docs_maintenance
 ```
@@ -72,8 +72,8 @@ developer/docs_maintenance
 
 ## Current infra snapshot (as documented)
 
-- `TATCHU3`: `172.25.64.3` (main DB/blob/share/CPU workers)
-- `ibehaveGPU1`: `172.25.70.3` (GPU worker host, permanent IP)
-- `LOKI`: `172.26.65.8` (backup host)
+- `MAIN_SERVER`: `172.25.64.3` (main DB/blob/share/CPU workers)
+- `GPU_SERVER`: `172.25.70.3` (GPU worker host, permanent IP)
+- `BACKUP_SERVER`: `172.26.65.8` (backup host)
 
 If this changes, update infrastructure pages first.

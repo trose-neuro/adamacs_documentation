@@ -66,7 +66,7 @@ For each failed key:
 ## Batch ingest and worker interaction
 
 Batch scripts should primarily stage tasks.
-Dedicated workers on TATCHU/ibehaveGPU should execute compute.
+Dedicated workers on MAIN_SERVER/GPU_SERVER should execute compute.
 
 ## Related pages
 

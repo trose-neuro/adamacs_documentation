@@ -1,10 +1,10 @@
-# Deploy To Private `troselab` Repository
+# Deploy To Private Organization Repository
 
 This runbook publishes `adamacs_documentation` as a private repository and keeps it maintainable for lab operations.
 
 ## 1) Create private repository in GitHub org
 
-1. In GitHub org `troselab`, create repository `adamacs_documentation`.
+1. In GitHub org `your-org`, create repository `adamacs_documentation`.
 2. Set visibility to **Private**.
 3. Do not initialize with default files if this local repo already exists.
 
@@ -13,7 +13,7 @@ This runbook publishes `adamacs_documentation` as a private repository and keeps
 From local repo root:
 
 ```bash
-git remote add origin git@github.com:troselab/adamacs_documentation.git
+git remote add origin git@github.com:your-org/adamacs_documentation.git
 git add .
 git commit -m "Initial RTD documentation import"
 git push -u origin main
@@ -22,7 +22,7 @@ git push -u origin main
 If `origin` already exists, update it:
 
 ```bash
-git remote set-url origin git@github.com:troselab/adamacs_documentation.git
+git remote set-url origin git@github.com:your-org/adamacs_documentation.git
 ```
 
 ## 3) Repository hardening
@@ -53,7 +53,7 @@ Optional: upload `_build/html` as workflow artifact.
 ### Option A: Read the Docs with private project support
 
 1. Connect GitHub account/org app in Read the Docs.
-2. Import `troselab/adamacs_documentation`.
+2. Import `your-org/adamacs_documentation`.
 3. Confirm config file `.readthedocs.yaml` is detected.
 4. Enable private documentation visibility.
 5. Grant project access to lab members/groups.

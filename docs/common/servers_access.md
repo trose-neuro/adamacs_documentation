@@ -4,14 +4,14 @@ This page summarizes practical server access for ADAMACS users.
 
 ## Current server IPs
 
-- `TATCHU3`: `172.25.64.3`
+- `MAIN_SERVER`: `172.25.64.3`
   - primary DataJoint DB host
   - blob storage host
   - share host for ingest uploads
   - CPU worker host
-- `ibehaveGPU1`: `172.25.70.3`
+- `GPU_SERVER`: `172.25.70.3`
   - GPU worker host for model-heavy pipelines
-- `LOKI`: `172.26.65.8`
+- `BACKUP_SERVER`: `172.26.65.8`
   - backup host (rsync pulls + borg)
 
 ## Primary access modes

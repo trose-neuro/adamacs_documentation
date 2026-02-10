@@ -1,82 +1,87 @@
-# Ingest GUI Workflow
+# Ingest GUI Quickstart (`ingestgui_v2`)
 
-The ingest GUI is the primary student-facing ingest interface.
+Use this when you want to ingest sessions quickly and safely.
 
-## Main entrypoint
+## 1. Open the correct notebook
 
-```python
-from adamacs.gui import select_sessions
+Open:
+- `adamacs_ingest/notebooks/00_ingest_gui_workflow_adamacs_ingest_v2.ipynb`
 
-select_sessions(["TR_ROS-0000_2026-01-01_sessXXXX_scanXXXX"])
-```
-
-In notebook form, use the center-stage workflow notebook in `adamacs_ingest`.
-
-## What the GUI does
-
-At a high level, the GUI workflow:
-- discovers candidate session folders
-- parses session and scan identifiers from folder names
-- resolves user defaults (cameras, setup type, parameter defaults)
-- ingests session + scan metadata
-- inserts processing tasks (imaging, pose, mocap, cascade where configured)
-- optionally performs lightweight populate steps
-
-## Recommended operator sequence
-
-1. Open GUI notebook and connect to DataJoint.
-2. Confirm root data directory and visible session list.
-3. Filter sessions by date/subject/user as needed.
-4. Verify each selected session has correct:
-   - subject ID
-   - session date
-   - scan IDs
-   - setup type / camera defaults
-   - processing parameter set index
-5. Commit ingest.
-6. Validate task rows were inserted.
-7. Wait for worker completion on heavy pipelines.
-
-## Safe defaults for students
-
-- Keep heavy population toggles disabled unless explicitly required.
-- Prefer task insertion over manual population for blob-heavy workflows.
-- For troubleshooting, temporarily set strict error mode only on a single test key.
-
-## Common GUI-side outputs
-
-- `session` and `scan` metadata rows
-- `scan.ScanInfo` updates
-- `imaging.ProcessingTask`
-- `model.PoseEstimationTaskNew`
-- `mocap.MotionCaptureTask`
-- `imaging.ActivityCascadeTask` (when model setup warrants)
-
-## Post-commit checks
-
-Use quick checks to confirm pipeline movement:
+Use these defaults:
 
 ```python
-from adamacs.pipeline import imaging, model
-from adamacs.schemas import mocap
-
-print("Processing tasks:", len(imaging.ProcessingTask))
-print("Pose tasks:", len(model.PoseEstimationTaskNew))
-print("Mocap tasks:", len(mocap.MotionCaptureTask))
+selected_data, get_dlc_models = ai.select_sessions(
+    sorted_dirs_root,
+    do_population=False,
+    rspace_upload=False,
+    ingest_opt="trigger",
+)
 ```
 
-Then restrict by session/scan key for targeted verification.
+## 2. Filter sessions, then launch GUI
 
-## Debugging strategy
+```python
+ADAMACS_SESSION_FILTER = "*XX*"
+ADAMACS_DATE_FILTER = ">2025-06-01*"
+ADAMACS_LAUNCH_GUI = True
+```
 
-If GUI commit fails:
-- check directory naming tokens (`sess...`, `scan...`)
-- verify scan files exist and are readable
-- run on one session at a time
-- inspect traceback with `suppress_errors=False` in controlled debugging context
+Folder names must contain parseable session/scan tokens, for example:
+- `..._YYYY-MM-DD_sess..._scan...`
 
-## Related pages
+## 3. Fill GUI rows and commit
 
-- `Ingest -> Batch Ingest`
-- `Common -> Troubleshooting`
-- `Infrastructure -> Worker-Owned Population`
+![ADAMACS Ingestion Console v2](../assets/ingest/ingestgui_v2_console.png)
+
+Required fields to verify before commit:
+- `Project`
+- `Recording Location`
+- `Recording Setup`
+- `Suite2p Params`
+- `DLC1/2/3` (leave defaults unless you need a different model)
+- `Commit?` is checked
+
+Usually optional:
+- `Same Site ID`
+- `Session Comment`
+- `Behavior Stage`
+- `Curated?`
+
+Recommended default:
+- Keep `DLC Crop` enabled unless you have a specific reason to disable it.
+
+## 4. 30-second success check
+
+After commit, run:
+
+```python
+(imaging.ProcessingTask() & scan_key)
+(model.PoseEstimationTaskNew & scan_key)
+```
+
+![Pose task check](../assets/ingest/ingestgui_v2_pose_task_check.png)
+
+For sync sanity checks:
+
+```python
+(event.Event() & "event_type='aux_cam'" & 'event_start_time < "100"' & scan_key)
+(event.Event() & "event_type='aux_cam'" & 'event_start_time > "1000"' & scan_key)
+```
+
+![Sync check (<100)](../assets/ingest/ingestgui_v2_sync_pre100.png)
+![Sync check (>1000)](../assets/ingest/ingestgui_v2_sync_post1000.png)
+
+## 5. If it fails
+
+- No sessions shown:
+  check `ADAMACS_SESSION_FILTER`, `ADAMACS_DATE_FILTER`, and `custom.exp_root_data_dir`.
+- No tasks after commit:
+  confirm `Commit?` is checked and `Suite2p Params` is not dummy.
+- Sync checks empty:
+  verify aux camera/event files exist for that scan.
+
+## User defaults
+
+Defaults are read from `user_configs/<initials>.ini`.
+
+![User defaults INI](../assets/ingest/ingestgui_v2_user_defaults_ini.png)

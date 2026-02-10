@@ -1,8 +1,8 @@
 from datetime import datetime
 
 project = "adamacs documentation"
-author = "Rose Lab"
-copyright = f"{datetime.now():%Y}, Rose Lab"
+author = "Documentation Team"
+copyright = f"{datetime.now():%Y}, Documentation Team"
 release = "2026.02"
 
 extensions = [
