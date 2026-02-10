@@ -1,5 +1,10 @@
 # adamacs_documentation
 
+> **Primary ADAMACS Documentation Repository:**  
+> <https://github.com/trose-neuro/adamacs_documentation>
+>
+> Link to this repository from all ADAMACS codebases as the canonical documentation source.
+
 Central Read the Docs source for ADAMACS ingest + analysis operations.
 
 This repository is designed as a deep, student-facing and operator-facing documentation hub covering:
