@@ -20,6 +20,7 @@ glossary
 environment_setup
 dj_local_conf
 servers_access
+external_references
 ```
 
 ## Philosophy and operations

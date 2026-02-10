@@ -47,3 +47,16 @@ proc_key = {'session_id': 'sessXXXXXXXX', 'scan_id': 'scanXXXXXXXX', 'paramset_i
 
 ADAMACS imaging follows Element Calcium Imaging processing conventions.
 Reference: <https://docs.datajoint.com/elements/element-calcium-imaging/latest/>
+
+## External references
+
+- DataJoint query operators:
+  <https://docs.datajoint.com/core/datajoint-python/latest/query/operators/>
+- Element Calcium Imaging:
+  <https://docs.datajoint.com/elements/element-calcium-imaging/latest/>
+- Suite2p docs:
+  <https://suite2p.readthedocs.io/en/latest/>
+- Suite2p parameters:
+  <https://suite2p.readthedocs.io/en/latest/parameters/>
+- Suite2p outputs:
+  <https://suite2p.readthedocs.io/en/latest/outputs/>

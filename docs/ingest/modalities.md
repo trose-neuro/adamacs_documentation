@@ -156,3 +156,22 @@ Common normalized setup values used by ingest logic include:
 4. Add mocap session.
 5. Add eye/gaze path.
 6. Move to batch ingest templates.
+
+## External docs by modality
+
+- Calcium imaging:
+  <https://docs.datajoint.com/elements/element-calcium-imaging/latest/>,
+  <https://suite2p.readthedocs.io/en/latest/parameters/>,
+  <https://suite2p.readthedocs.io/en/latest/outputs/>
+- DLC pose tracking:
+  <https://docs.datajoint.com/elements/element-deeplabcut/latest/>,
+  <https://deeplabcut.github.io/DeepLabCut/>
+- Event/trial synchronization:
+  <https://docs.datajoint.com/elements/element-event/0.2/concepts/>,
+  <https://docs.datajoint.com/core/datajoint-python/latest/query/operators/>
+- DISK imputation:
+  <https://github.com/bozeklab/DISK>
+- CASCADE inference:
+  <https://github.com/HelmchenLabSoftware/Cascade>
+- Full index:
+  `Common -> External References`

@@ -86,6 +86,21 @@ Defaults are read from `user_configs/<initials>.ini`.
 
 ![User defaults INI](../assets/ingest/ingestgui_v2_user_defaults_ini.png)
 
+## External docs for GUI fields
+
+- `Suite2p Params`:
+  <https://suite2p.readthedocs.io/en/latest/parameters/> and
+  <https://docs.datajoint.com/elements/element-calcium-imaging/latest/>
+- `DLC1/2/3` and crop behavior:
+  <https://docs.datajoint.com/elements/element-deeplabcut/latest/> and
+  <https://deeplabcut.github.io/DeepLabCut/>
+- Sync checks on `event.Event`:
+  <https://docs.datajoint.com/elements/element-event/0.2/concepts/>
+- DataJoint query syntax used in checks:
+  <https://docs.datajoint.com/core/datajoint-python/latest/query/operators/>
+- Full link index:
+  `Common -> External References`
+
 ## Related pages
 
 - `Ingest -> Event/Trial Ontology`

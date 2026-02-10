@@ -41,3 +41,14 @@ scan_key = {'session_id': 'sessXXXXXXXX', 'scan_id': 'scanXXXXXXXX'}
 - Treat imputed outputs as a distinct data product, not a silent replacement of raw values.
 - Preserve uncertainty and mask fields in downstream analyses.
 - Report model/version metadata whenever imputed values are used.
+
+## External references
+
+- DISK source and README:
+  <https://github.com/bozeklab/DISK>
+- DeepLabCut docs (for upstream pose streams):
+  <https://deeplabcut.github.io/DeepLabCut/>
+- Element DeepLabCut integration:
+  <https://docs.datajoint.com/elements/element-deeplabcut/latest/>
+- DataJoint query operators:
+  <https://docs.datajoint.com/core/datajoint-python/latest/query/operators/>

@@ -41,9 +41,15 @@ schemas/disk
 ## External references used
 
 - DataJoint Elements index: <https://docs.datajoint.com/elements/>
+- DataJoint core docs: <https://docs.datajoint.com/core/datajoint-python/latest/>
 - Element Session: <https://docs.datajoint.com/elements/element-session/latest/>
 - Element Calcium Imaging: <https://docs.datajoint.com/elements/element-calcium-imaging/latest/>
 - Element DeepLabCut: <https://docs.datajoint.com/elements/element-deeplabcut/latest/>
 - Element Event concepts: <https://docs.datajoint.com/elements/element-event/0.2/concepts/>
+- Suite2p docs: <https://suite2p.readthedocs.io/en/latest/>
+- Suite2p parameters: <https://suite2p.readthedocs.io/en/latest/parameters/>
+- DeepLabCut docs: <https://deeplabcut.github.io/DeepLabCut/>
+- DISK source: <https://github.com/bozeklab/DISK>
+- CASCADE source: <https://github.com/HelmchenLabSoftware/Cascade>
 - Reference pipeline docs: <https://moser-pipelines.readthedocs.io/en/latest/>
 - Reference pipeline components page: <https://moser-pipelines.readthedocs.io/en/latest/technical/contributing.html#components-of-the-pipeline>

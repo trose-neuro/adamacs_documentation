@@ -46,3 +46,12 @@ scan_key = {'session_id': 'sessXXXXXXXX', 'scan_id': 'scanXXXXXXXX'}
 
 ADAMACS trial logic follows Element Event trial tables.
 Reference: <https://docs.datajoint.com/elements/element-event/0.2/concepts/>
+
+## External references
+
+- Element Event concepts (trial ontology):
+  <https://docs.datajoint.com/elements/element-event/0.2/concepts/>
+- DataJoint query operators:
+  <https://docs.datajoint.com/core/datajoint-python/latest/query/operators/>
+- ADAMACS ontology page:
+  `Ingest -> Event/Trial Ontology`

@@ -41,6 +41,7 @@ developer/overview
 ## Quick paths
 
 - New users: `Common -> Getting Started`
+- External component docs: `Common -> External References`
 - Ingest users: `Ingest -> GUI Workflow`
 - Analysis users: `Analysis -> Overview`
 - Operators/admins: `Infrastructure -> Overview`

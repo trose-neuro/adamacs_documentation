@@ -117,6 +117,11 @@ This repository is RTD-ready via:
 - `.readthedocs.yaml`
 - `docs/conf.py`
 
+## External component documentation
+
+For upstream toolchain references (DataJoint, Elements, Suite2p, DeepLabCut, DISK, CASCADE), use:
+- `docs/common/external_references.md`
+
 ## Canonical upstream repositories
 
 Operational code lives in:

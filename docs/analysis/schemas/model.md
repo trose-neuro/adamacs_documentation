@@ -45,3 +45,14 @@ It is the main route from camera streams to body-part trajectories.
 
 ADAMACS model tables build on Element DeepLabCut patterns.
 Reference: <https://docs.datajoint.com/elements/element-deeplabcut/latest/>
+
+## External references
+
+- DataJoint query operators:
+  <https://docs.datajoint.com/core/datajoint-python/latest/query/operators/>
+- Element DeepLabCut:
+  <https://docs.datajoint.com/elements/element-deeplabcut/latest/>
+- DeepLabCut docs:
+  <https://deeplabcut.github.io/DeepLabCut/>
+- DeepLabCut source:
+  <https://github.com/DeepLabCut/DeepLabCut>
