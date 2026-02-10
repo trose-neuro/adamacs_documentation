@@ -39,6 +39,7 @@ ingest/notebook_map
 
 analysis/overview
 analysis/database_structure
+analysis/schema_chapters
 analysis/notebook_map
 analysis/query_patterns
 analysis/schema_scaffolding

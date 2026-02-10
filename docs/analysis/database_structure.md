@@ -2,6 +2,9 @@
 
 This chapter documents the ADAMACS database structure with real `dj.Diagram` outputs.
 
+For table-by-table, user-facing chapters, see:
+- `Analysis -> Schema Chapters (User-Focused)`
+
 ## Why this chapter exists
 
 In the Moser-style pipeline philosophy, schema diagrams are operational documents.
