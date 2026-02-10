@@ -1,0 +1,526 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2121pt" height="513pt" viewBox="0.00 0.00 2121.00 513.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 509.28)">
+<polygon fill="white" stroke="none" points="-4,4 -4,-509.28 2116.66,-509.28 2116.66,4 -4,4"/>
+<!-- `lab_pupil_tracking`.`#pupil_ellipse_parameter_free_moving` -->
+<g id="node1" class="node">
+<title>`lab_pupil_tracking`.`#pupil_ellipse_parameter_free_moving`</title>
+<polygon fill="#000000" fill-opacity="0.125490" stroke="none" points="1356.25,-223.04 1062.75,-223.04 1062.75,-188.48 1356.25,-188.48 1356.25,-223.04"/>
+<text xml:space="preserve" text-anchor="start" x="1070.75" y="-203.26" font-family="arial" text-decoration="underline" font-size="10.00">`lab_pupil_tracking`.`#pupil_ellipse_parameter_free_moving`</text>
+</g>
+<!-- pupil_tracking.PupilEllipseFittingFreeMoving -->
+<g id="node30" class="node">
+<title>pupil_tracking.PupilEllipseFittingFreeMoving</title>
+<g id="a_node30"><a xlink:title="→ `lab_pupil_tracking`.`#pupil_ellipse_parameter_free_moving`→ pupil_tracking.PoseEstimationNew------------------------------ellipse_dict         cam_center           eye_center           pupil_center         scale                theta                phi                  diameter             ">
+<ellipse fill="#ff0000" fill-opacity="0.125490" stroke="#ff0000" stroke-opacity="0.125490" cx="1209.5" cy="-135.2" rx="12.96" ry="12.96"/>
+<text xml:space="preserve" text-anchor="middle" x="1209.5" y="-130.93" font-family="arial" font-size="12.00" fill="#7f0000" fill-opacity="0.627451">pupil_tracking.PupilEllipseFittingFreeMoving</text>
+</a>
+</g>
+</g>
+<!-- `lab_pupil_tracking`.`#pupil_ellipse_parameter_free_moving`&#45;&gt;pupil_tracking.PupilEllipseFittingFreeMoving -->
+<g id="edge1" class="edge">
+<title>`lab_pupil_tracking`.`#pupil_ellipse_parameter_free_moving`-&gt;pupil_tracking.PupilEllipseFittingFreeMoving</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M1209.5,-188.51C1209.5,-176 1209.5,-159.01 1209.5,-147.83"/>
+</g>
+<!-- `ext_pupil_tracking`.`__pupil_ellipse_fitting` -->
+<g id="node2" class="node">
+<title>`ext_pupil_tracking`.`__pupil_ellipse_fitting`</title>
+<ellipse fill="#ff0000" fill-opacity="0.125490" stroke="#ff0000" stroke-opacity="0.125490" cx="1497.5" cy="-135.2" rx="12.96" ry="12.96"/>
+<text xml:space="preserve" text-anchor="middle" x="1497.5" y="-130.93" font-family="arial" font-size="12.00" fill="#7f0000" fill-opacity="0.627451">`ext_pupil_tracking`.`__pupil_ellipse_fitting`</text>
+</g>
+<!-- `lab_model`.`d_l_c_live_pose_estimation_task_new` -->
+<g id="node3" class="node">
+<title>`lab_model`.`d_l_c_live_pose_estimation_task_new`</title>
+<polygon fill="#00ff00" fill-opacity="0.188235" stroke="#00ff00" stroke-opacity="0.188235" points="1360.75,-293.6 1040.25,-293.6 1040.25,-259.04 1360.75,-259.04 1360.75,-293.6"/>
+<text xml:space="preserve" text-anchor="middle" x="1200.5" y="-272.05" font-family="arial" font-size="12.00" fill="darkgreen">`lab_model`.`d_l_c_live_pose_estimation_task_new`</text>
+</g>
+<!-- pupil_tracking.PoseEstimationNew.BodyPartPosition -->
+<g id="node4" class="node">
+<title>pupil_tracking.PoseEstimationNew.BodyPartPosition</title>
+<g id="a_node4"><a xlink:title="→ pupil_tracking.PoseEstimationNew→ model.Model.BodyPart------------------------------frame_index          x_pos                y_pos                z_pos=null           likelihood           ">
+<polygon fill="none" stroke="none" points="1063.62,-145.2 817.38,-145.2 817.38,-125.2 1063.62,-125.2 1063.62,-145.2"/>
+<text xml:space="preserve" text-anchor="middle" x="940.5" y="-131.7" font-family="arial" font-size="10.00">pupil_tracking.PoseEstimationNew.BodyPartPosition</text>
+</a>
+</g>
+</g>
+<!-- model.RecordingInfo -->
+<g id="node5" class="node">
+<title>model.RecordingInfo</title>
+<g id="a_node5"><a xlink:title="→ model.VideoRecording------------------------------px_height            px_width             nframes              fps=null             recording_datetime=null recording_duration   ">
+<ellipse fill="#00007f" fill-opacity="0.250980" stroke="#00007f" stroke-opacity="0.250980" cx="233.5" cy="-276.32" rx="82.99" ry="17.28"/>
+<text xml:space="preserve" text-anchor="middle" x="233.5" y="-272.05" font-family="arial" font-size="12.00" fill="#00007f" fill-opacity="0.627451">model.RecordingInfo</text>
+</a>
+</g>
+</g>
+<!-- model.VideoRecording -->
+<g id="node6" class="node">
+<title>model.VideoRecording</title>
+<g id="a_node6"><a xlink:title="→ pl.Sessionrecording_id         ------------------------------→ equipment.Device">
+<polygon fill="#00ff00" fill-opacity="0.188235" stroke="#00ff00" stroke-opacity="0.188235" points="483.62,-364.16 345.38,-364.16 345.38,-329.6 483.62,-329.6 483.62,-364.16"/>
+<text xml:space="preserve" text-anchor="start" x="353.38" y="-343.61" font-family="arial" text-decoration="underline" font-size="12.00" fill="darkgreen">model.VideoRecording</text>
+</a>
+</g>
+</g>
+<!-- model.VideoRecording&#45;&gt;model.RecordingInfo -->
+<g id="edge2" class="edge">
+<title>model.VideoRecording-&gt;model.RecordingInfo</title>
+<path fill="none" stroke="#000000" stroke-width="2" stroke-opacity="0.250980" d="M370.22,-329.11C340.19,-317.73 300.86,-302.84 272.1,-291.94"/>
+</g>
+<!-- model.PoseEstimationTask -->
+<g id="node9" class="node">
+<title>model.PoseEstimationTask</title>
+<g id="a_node9"><a xlink:title="→ model.VideoRecording→ model.Model------------------------------task_mode=&quot;load&quot;     pose_estimation_output_dir=&quot;&quot; pose_estimation_params=null ">
+<polygon fill="#00ff00" fill-opacity="0.188235" stroke="#00ff00" stroke-opacity="0.188235" points="494.88,-293.6 334.12,-293.6 334.12,-259.04 494.88,-259.04 494.88,-293.6"/>
+<text xml:space="preserve" text-anchor="middle" x="414.5" y="-272.05" font-family="arial" font-size="12.00" fill="darkgreen">model.PoseEstimationTask</text>
+</a>
+</g>
+</g>
+<!-- model.VideoRecording&#45;&gt;model.PoseEstimationTask -->
+<g id="edge3" class="edge">
+<title>model.VideoRecording-&gt;model.PoseEstimationTask</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M414.5,-329.28C414.5,-318.5 414.5,-304.51 414.5,-293.76"/>
+</g>
+<!-- model.VideoRecording.File -->
+<g id="node23" class="node">
+<title>model.VideoRecording.File</title>
+<g id="a_node23"><a xlink:title="→ model.VideoRecordingfile_id              ------------------------------file_path            ">
+<polygon fill="none" stroke="none" points="133,-286.32 0,-286.32 0,-266.32 133,-266.32 133,-286.32"/>
+<text xml:space="preserve" text-anchor="start" x="8" y="-273.82" font-family="arial" text-decoration="underline" font-size="10.00">model.VideoRecording.File</text>
+</a>
+</g>
+</g>
+<!-- model.VideoRecording&#45;&gt;model.VideoRecording.File -->
+<g id="edge4" class="edge">
+<title>model.VideoRecording-&gt;model.VideoRecording.File</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M345.12,-333.08C289.89,-322.77 210.65,-307.72 141.5,-293.6 130.27,-291.31 118.13,-288.72 106.94,-286.29"/>
+</g>
+<!-- model.DLCLivePoseEstimationTask -->
+<g id="node7" class="node">
+<title>model.DLCLivePoseEstimationTask</title>
+<g id="a_node7"><a xlink:title="→ model.DLCliveRecording→ model.Model------------------------------task_mode=&quot;load&quot;     pose_estimation_output_dir=&quot;&quot; pose_estimation_params=null ">
+<polygon fill="#00ff00" fill-opacity="0.188235" stroke="#00ff00" stroke-opacity="0.188235" points="1022.5,-293.6 814.5,-293.6 814.5,-259.04 1022.5,-259.04 1022.5,-293.6"/>
+<text xml:space="preserve" text-anchor="middle" x="918.5" y="-272.05" font-family="arial" font-size="12.00" fill="darkgreen">model.DLCLivePoseEstimationTask</text>
+</a>
+</g>
+</g>
+<!-- model.DLCLivePoseEstimation -->
+<g id="node27" class="node">
+<title>model.DLCLivePoseEstimation</title>
+<g id="a_node27"><a xlink:title="→ model.DLCLivePoseEstimationTask------------------------------pose_estimation_time ">
+<ellipse fill="#ff0000" fill-opacity="0.125490" stroke="#ff0000" stroke-opacity="0.125490" cx="853.5" cy="-205.76" rx="12.96" ry="12.96"/>
+<text xml:space="preserve" text-anchor="middle" x="853.5" y="-201.49" font-family="arial" font-size="12.00" fill="#7f0000" fill-opacity="0.627451">model.DLCLivePoseEstimation</text>
+</a>
+</g>
+</g>
+<!-- model.DLCLivePoseEstimationTask&#45;&gt;model.DLCLivePoseEstimation -->
+<g id="edge5" class="edge">
+<title>model.DLCLivePoseEstimationTask-&gt;model.DLCLivePoseEstimation</title>
+<path fill="none" stroke="#000000" stroke-width="2" stroke-opacity="0.250980" d="M902.77,-258.72C889.84,-245.09 872.04,-226.32 861.76,-215.47"/>
+</g>
+<!-- equipment.Device -->
+<g id="node8" class="node">
+<title>equipment.Device</title>
+<g id="a_node8"><a xlink:title="camera               ------------------------------camera_description=&quot;&quot; ">
+<polygon fill="#00ff00" fill-opacity="0.188235" stroke="#00ff00" stroke-opacity="0.188235" points="1204.88,-434.72 1092.12,-434.72 1092.12,-400.16 1204.88,-400.16 1204.88,-434.72"/>
+<text xml:space="preserve" text-anchor="start" x="1100.12" y="-414.17" font-family="arial" text-decoration="underline" font-size="12.00" fill="darkgreen">equipment.Device</text>
+</a>
+</g>
+</g>
+<!-- equipment.Device&#45;&gt;model.VideoRecording -->
+<g id="edge6" class="edge">
+<title>equipment.Device-&gt;model.VideoRecording</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-dasharray="5,2" stroke-opacity="0.250980" d="M1091.82,-411.15C959.08,-398.75 628.4,-367.86 483.91,-354.36"/>
+</g>
+<!-- model.DLCliveRecording -->
+<g id="node19" class="node">
+<title>model.DLCliveRecording</title>
+<g id="a_node19"><a xlink:title="→ pl.Scanrecording_id         ------------------------------→ equipment.Device">
+<polygon fill="#00ff00" fill-opacity="0.188235" stroke="#00ff00" stroke-opacity="0.188235" points="1276,-364.16 1125,-364.16 1125,-329.6 1276,-329.6 1276,-364.16"/>
+<text xml:space="preserve" text-anchor="start" x="1133" y="-343.61" font-family="arial" text-decoration="underline" font-size="12.00" fill="darkgreen">model.DLCliveRecording</text>
+</a>
+</g>
+</g>
+<!-- equipment.Device&#45;&gt;model.DLCliveRecording -->
+<g id="edge7" class="edge">
+<title>equipment.Device-&gt;model.DLCliveRecording</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-dasharray="5,2" stroke-opacity="0.250980" d="M1161.09,-399.84C1169.26,-389.06 1179.88,-375.07 1188.03,-364.32"/>
+</g>
+<!-- model.VideoRecordingNew -->
+<g id="node32" class="node">
+<title>model.VideoRecordingNew</title>
+<g id="a_node32"><a xlink:title="→ pl.Scanrecording_id         ------------------------------→ equipment.Device">
+<polygon fill="#00ff00" fill-opacity="0.188235" stroke="#00ff00" stroke-opacity="0.188235" points="1553,-364.16 1390,-364.16 1390,-329.6 1553,-329.6 1553,-364.16"/>
+<text xml:space="preserve" text-anchor="start" x="1398" y="-343.61" font-family="arial" text-decoration="underline" font-size="12.00" fill="darkgreen">model.VideoRecordingNew</text>
+</a>
+</g>
+</g>
+<!-- equipment.Device&#45;&gt;model.VideoRecordingNew -->
+<g id="edge8" class="edge">
+<title>equipment.Device-&gt;model.VideoRecordingNew</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-dasharray="5,2" stroke-opacity="0.250980" d="M1205.35,-402.26C1208.44,-401.54 1211.51,-400.83 1214.5,-400.16 1272.91,-387.02 1339.13,-373.58 1389.72,-363.62"/>
+</g>
+<!-- model.PoseEstimation -->
+<g id="node14" class="node">
+<title>model.PoseEstimation</title>
+<g id="a_node14"><a xlink:title="→ model.PoseEstimationTask------------------------------pose_estimation_time ">
+<ellipse fill="#ff0000" fill-opacity="0.125490" stroke="#ff0000" stroke-opacity="0.125490" cx="414.5" cy="-205.76" rx="12.96" ry="12.96"/>
+<text xml:space="preserve" text-anchor="middle" x="414.5" y="-201.49" font-family="arial" font-size="12.00" fill="#7f0000" fill-opacity="0.627451">model.PoseEstimation</text>
+</a>
+</g>
+</g>
+<!-- model.PoseEstimationTask&#45;&gt;model.PoseEstimation -->
+<g id="edge9" class="edge">
+<title>model.PoseEstimationTask-&gt;model.PoseEstimation</title>
+<path fill="none" stroke="#000000" stroke-width="2" stroke-opacity="0.250980" d="M414.5,-258.72C414.5,-246.36 414.5,-229.77 414.5,-218.69"/>
+</g>
+<!-- model.VideoRecordingNew.File -->
+<g id="node10" class="node">
+<title>model.VideoRecordingNew.File</title>
+<g id="a_node10"><a xlink:title="→ model.VideoRecordingNewfile_id              ------------------------------file_path            ">
+<polygon fill="none" stroke="none" points="1896.75,-286.32 1744.25,-286.32 1744.25,-266.32 1896.75,-266.32 1896.75,-286.32"/>
+<text xml:space="preserve" text-anchor="start" x="1752.25" y="-273.82" font-family="arial" text-decoration="underline" font-size="10.00">model.VideoRecordingNew.File</text>
+</a>
+</g>
+</g>
+<!-- pupil_tracking.PoseEstimationNew -->
+<g id="node11" class="node">
+<title>pupil_tracking.PoseEstimationNew</title>
+<g id="a_node11"><a xlink:title="→ model.PoseEstimationTaskNew------------------------------pose_estimation_time ">
+<ellipse fill="#ff0000" fill-opacity="0.125490" stroke="#ff0000" stroke-opacity="0.125490" cx="1486.5" cy="-205.76" rx="12.96" ry="12.96"/>
+<text xml:space="preserve" text-anchor="middle" x="1486.5" y="-201.49" font-family="arial" font-size="12.00" fill="#7f0000" fill-opacity="0.627451">pupil_tracking.PoseEstimationNew</text>
+</a>
+</g>
+</g>
+<!-- pupil_tracking.PoseEstimationNew&#45;&gt;`ext_pupil_tracking`.`__pupil_ellipse_fitting` -->
+<g id="edge10" class="edge">
+<title>pupil_tracking.PoseEstimationNew-&gt;`ext_pupil_tracking`.`__pupil_ellipse_fitting`</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-dasharray="5,2" stroke-opacity="0.250980" d="M1488.37,-193.13C1490.4,-180.45 1493.64,-160.27 1495.66,-147.66"/>
+</g>
+<!-- pupil_tracking.PoseEstimationNew&#45;&gt;pupil_tracking.PoseEstimationNew.BodyPartPosition -->
+<g id="edge11" class="edge">
+<title>pupil_tracking.PoseEstimationNew-&gt;pupil_tracking.PoseEstimationNew.BodyPartPosition</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M1474.14,-203.05C1452.25,-200.03 1405.23,-193.59 1365.5,-188.48 1235.37,-171.73 1202.72,-168.51 1072.5,-152.48 1053.25,-150.11 1032.42,-147.54 1013.12,-145.16"/>
+</g>
+<!-- disk.DLCImputationTask -->
+<g id="node18" class="node">
+<title>disk.DLCImputationTask</title>
+<g id="a_node18"><a xlink:title="→ pupil_tracking.PoseEstimationNew→ disk.DISKModel------------------------------task_mode            output_dir=&quot;&quot;        disk_params=null     task_description=&quot;&quot;  ">
+<polygon fill="#00ff00" fill-opacity="0.188235" stroke="#00ff00" stroke-opacity="0.188235" points="1803.38,-152.48 1657.62,-152.48 1657.62,-117.92 1803.38,-117.92 1803.38,-152.48"/>
+<text xml:space="preserve" text-anchor="middle" x="1730.5" y="-130.93" font-family="arial" font-size="12.00" fill="darkgreen">disk.DLCImputationTask</text>
+</a>
+</g>
+</g>
+<!-- pupil_tracking.PoseEstimationNew&#45;&gt;disk.DLCImputationTask -->
+<g id="edge12" class="edge">
+<title>pupil_tracking.PoseEstimationNew-&gt;disk.DLCImputationTask</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M1498.6,-201.36C1529.52,-192.67 1613.04,-169.2 1670.92,-152.94"/>
+</g>
+<!-- pupil_tracking.PupilEllipseFitting -->
+<g id="node25" class="node">
+<title>pupil_tracking.PupilEllipseFitting</title>
+<g id="a_node25"><a xlink:title="→ pupil_tracking.PupilEllipseParameter→ pupil_tracking.PoseEstimationNew------------------------------ellipse_dict         cam_center           eye_center           scale                theta                phi                  diameter             ">
+<ellipse fill="#ff0000" fill-opacity="0.125490" stroke="#ff0000" stroke-opacity="0.125490" cx="1917.5" cy="-135.2" rx="12.96" ry="12.96"/>
+<text xml:space="preserve" text-anchor="middle" x="1917.5" y="-130.93" font-family="arial" font-size="12.00" fill="#7f0000" fill-opacity="0.627451">pupil_tracking.PupilEllipseFitting</text>
+</a>
+</g>
+</g>
+<!-- pupil_tracking.PoseEstimationNew&#45;&gt;pupil_tracking.PupilEllipseFitting -->
+<g id="edge13" class="edge">
+<title>pupil_tracking.PoseEstimationNew-&gt;pupil_tracking.PupilEllipseFitting</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M1498.93,-202.78C1561.6,-192.81 1842.24,-148.17 1905.02,-138.19"/>
+</g>
+<!-- pupil_tracking.PoseEstimationNew&#45;&gt;pupil_tracking.PupilEllipseFittingFreeMoving -->
+<g id="edge14" class="edge">
+<title>pupil_tracking.PoseEstimationNew-&gt;pupil_tracking.PupilEllipseFittingFreeMoving</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M1474.24,-201.73C1428.38,-190.37 1267.24,-150.49 1221.62,-139.2"/>
+</g>
+<!-- pl.Session -->
+<g id="node12" class="node">
+<title>pl.Session</title>
+<g id="a_node12"><a xlink:title="session_id           ------------------------------→ pl.Subjectsession_datetime     ">
+<polygon fill="#00ff00" fill-opacity="0.188235" stroke="#00ff00" stroke-opacity="0.188235" points="909.62,-505.28 837.38,-505.28 837.38,-470.72 909.62,-470.72 909.62,-505.28"/>
+<text xml:space="preserve" text-anchor="start" x="845.38" y="-484.73" font-family="arial" text-decoration="underline" font-size="12.00" fill="darkgreen">pl.Session</text>
+</a>
+</g>
+</g>
+<!-- pl.Session&#45;&gt;model.VideoRecording -->
+<g id="edge15" class="edge">
+<title>pl.Session-&gt;model.VideoRecording</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M837.1,-475.97C756.95,-451.67 564.8,-393.44 469.72,-364.62"/>
+</g>
+<!-- pl.Scan -->
+<g id="node21" class="node">
+<title>pl.Scan</title>
+<g id="a_node21"><a xlink:title="→ pl.Sessionscan_id              ------------------------------→ [nullable] pl.Device→ scan.AcquisitionSoftwarescan_notes=&quot;&quot;        ">
+<polygon fill="#00ff00" fill-opacity="0.188235" stroke="#00ff00" stroke-opacity="0.188235" points="1279.75,-434.72 1223.25,-434.72 1223.25,-400.16 1279.75,-400.16 1279.75,-434.72"/>
+<text xml:space="preserve" text-anchor="start" x="1231.25" y="-414.17" font-family="arial" text-decoration="underline" font-size="12.00" fill="darkgreen">pl.Scan</text>
+</a>
+</g>
+</g>
+<!-- pl.Session&#45;&gt;pl.Scan -->
+<g id="edge16" class="edge">
+<title>pl.Session-&gt;pl.Scan</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M909.87,-484.43C972.79,-479.32 1105.55,-465.6 1213.5,-434.72 1216.67,-433.81 1219.93,-432.7 1223.15,-431.5"/>
+</g>
+<!-- disk.DLCImputation.BodyPartPositionDISK -->
+<g id="node13" class="node">
+<title>disk.DLCImputation.BodyPartPositionDISK</title>
+<g id="a_node13"><a xlink:title="→ disk.DLCImputation→ model.Model.BodyPart------------------------------frame_index          x_pos                y_pos                z_pos=null           uncertainty          imputed_mask         original_likelihood  ">
+<polygon fill="none" stroke="none" points="686.38,-20 480.62,-20 480.62,0 686.38,0 686.38,-20"/>
+<text xml:space="preserve" text-anchor="middle" x="583.5" y="-6.5" font-family="arial" font-size="10.00">disk.DLCImputation.BodyPartPositionDISK</text>
+</a>
+</g>
+</g>
+<!-- model.PoseEstimation.BodyPartPosition -->
+<g id="node16" class="node">
+<title>model.PoseEstimation.BodyPartPosition</title>
+<g id="a_node16"><a xlink:title="→ model.PoseEstimation→ model.Model.BodyPart------------------------------frame_index          x_pos                y_pos                z_pos=null           likelihood           ">
+<polygon fill="none" stroke="none" points="511,-145.2 318,-145.2 318,-125.2 511,-125.2 511,-145.2"/>
+<text xml:space="preserve" text-anchor="middle" x="414.5" y="-131.7" font-family="arial" font-size="10.00">model.PoseEstimation.BodyPartPosition</text>
+</a>
+</g>
+</g>
+<!-- model.PoseEstimation&#45;&gt;model.PoseEstimation.BodyPartPosition -->
+<g id="edge17" class="edge">
+<title>model.PoseEstimation-&gt;model.PoseEstimation.BodyPartPosition</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M414.5,-192.82C414.5,-179.16 414.5,-157.12 414.5,-144.96"/>
+</g>
+<!-- model.RecordingInfoNew -->
+<g id="node15" class="node">
+<title>model.RecordingInfoNew</title>
+<g id="a_node15"><a xlink:title="→ model.VideoRecordingNew------------------------------px_height            px_width             nframes              fps=null             recording_datetime=null recording_duration   ">
+<ellipse fill="#00007f" fill-opacity="0.250980" stroke="#00007f" stroke-opacity="0.250980" cx="2013.5" cy="-276.32" rx="99.16" ry="17.28"/>
+<text xml:space="preserve" text-anchor="middle" x="2013.5" y="-272.05" font-family="arial" font-size="12.00" fill="#00007f" fill-opacity="0.627451">model.RecordingInfoNew</text>
+</a>
+</g>
+</g>
+<!-- model.Model.BodyPart -->
+<g id="node17" class="node">
+<title>model.Model.BodyPart</title>
+<g id="a_node17"><a xlink:title="→ model.Model→ model.BodyPart">
+<polygon fill="none" stroke="none" points="678,-215.76 563,-215.76 563,-195.76 678,-195.76 678,-215.76"/>
+<text xml:space="preserve" text-anchor="middle" x="620.5" y="-202.26" font-family="arial" font-size="10.00">model.Model.BodyPart</text>
+</a>
+</g>
+</g>
+<!-- model.Model.BodyPart&#45;&gt;pupil_tracking.PoseEstimationNew.BodyPartPosition -->
+<g id="edge18" class="edge">
+<title>model.Model.BodyPart-&gt;pupil_tracking.PoseEstimationNew.BodyPartPosition</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M662.33,-195.8C723.66,-182.66 837.32,-158.31 898.66,-145.17"/>
+</g>
+<!-- model.Model.BodyPart&#45;&gt;disk.DLCImputation.BodyPartPositionDISK -->
+<g id="edge19" class="edge">
+<title>model.Model.BodyPart-&gt;disk.DLCImputation.BodyPartPositionDISK</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M603.17,-195.84C588.22,-187.07 567.64,-172.14 558.5,-152.48 536.84,-105.89 566.23,-42.67 578.53,-19.75"/>
+</g>
+<!-- model.Model.BodyPart&#45;&gt;model.PoseEstimation.BodyPartPosition -->
+<g id="edge20" class="edge">
+<title>model.Model.BodyPart-&gt;model.PoseEstimation.BodyPartPosition</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M593.57,-195.8C554.09,-182.66 480.92,-158.31 441.44,-145.17"/>
+</g>
+<!-- model.DLCLivePoseEstimation.BodyPartPosition -->
+<g id="node34" class="node">
+<title>model.DLCLivePoseEstimation.BodyPartPosition</title>
+<g id="a_node34"><a xlink:title="→ model.DLCLivePoseEstimation→ model.Model.BodyPart------------------------------frame_index          x_pos                y_pos                z_pos=null           likelihood           ">
+<polygon fill="none" stroke="none" points="799.12,-145.2 567.88,-145.2 567.88,-125.2 799.12,-125.2 799.12,-145.2"/>
+<text xml:space="preserve" text-anchor="middle" x="683.5" y="-131.7" font-family="arial" font-size="10.00">model.DLCLivePoseEstimation.BodyPartPosition</text>
+</a>
+</g>
+</g>
+<!-- model.Model.BodyPart&#45;&gt;model.DLCLivePoseEstimation.BodyPartPosition -->
+<g id="edge21" class="edge">
+<title>model.Model.BodyPart-&gt;model.DLCLivePoseEstimation.BodyPartPosition</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M628.74,-195.8C640.88,-182.58 663.43,-158.04 675.46,-144.95"/>
+</g>
+<!-- disk.DLCImputation -->
+<g id="node29" class="node">
+<title>disk.DLCImputation</title>
+<g id="a_node29"><a xlink:title="→ disk.DLCImputationTask------------------------------imputation_time      n_frames_total       n_frames_imputed     n_values_imputed     ">
+<ellipse fill="#ff0000" fill-opacity="0.125490" stroke="#ff0000" stroke-opacity="0.125490" cx="1179.5" cy="-68.96" rx="12.96" ry="12.96"/>
+<text xml:space="preserve" text-anchor="middle" x="1179.5" y="-64.69" font-family="arial" font-size="12.00" fill="#7f0000" fill-opacity="0.627451">disk.DLCImputation</text>
+</a>
+</g>
+</g>
+<!-- disk.DLCImputationTask&#45;&gt;disk.DLCImputation -->
+<g id="edge22" class="edge">
+<title>disk.DLCImputationTask-&gt;disk.DLCImputation</title>
+<path fill="none" stroke="#000000" stroke-width="2" stroke-opacity="0.250980" d="M1657.24,-119.3C1654.29,-118.81 1651.37,-118.35 1648.5,-117.92 1468.4,-90.9 1247.08,-74.62 1192.24,-70.82"/>
+</g>
+<!-- model.DLCliveRecording&#45;&gt;`lab_model`.`d_l_c_live_pose_estimation_task_new` -->
+<g id="edge23" class="edge">
+<title>model.DLCliveRecording-&gt;`lab_model`.`d_l_c_live_pose_estimation_task_new`</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M1200.5,-329.28C1200.5,-318.5 1200.5,-304.51 1200.5,-293.76"/>
+</g>
+<!-- model.DLCliveRecording&#45;&gt;model.DLCLivePoseEstimationTask -->
+<g id="edge24" class="edge">
+<title>model.DLCliveRecording-&gt;model.DLCLivePoseEstimationTask</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M1131.52,-329.11C1087.65,-318.44 1031.08,-304.69 987.26,-294.04"/>
+</g>
+<!-- model.DLCliveRecording.File -->
+<g id="node31" class="node">
+<title>model.DLCliveRecording.File</title>
+<g id="a_node31"><a xlink:title="→ model.DLCliveRecordingfile_id              ------------------------------file_path            ">
+<polygon fill="none" stroke="none" points="1726.25,-286.32 1582.75,-286.32 1582.75,-266.32 1726.25,-266.32 1726.25,-286.32"/>
+<text xml:space="preserve" text-anchor="start" x="1590.75" y="-273.82" font-family="arial" text-decoration="underline" font-size="10.00">model.DLCliveRecording.File</text>
+</a>
+</g>
+</g>
+<!-- model.DLCliveRecording&#45;&gt;model.DLCliveRecording.File -->
+<g id="edge25" class="edge">
+<title>model.DLCliveRecording-&gt;model.DLCliveRecording.File</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M1276.43,-336.57C1351.94,-327 1471.01,-311.07 1573.5,-293.6 1586.23,-291.43 1600.02,-288.78 1612.55,-286.24"/>
+</g>
+<!-- model.BodyPart -->
+<g id="node20" class="node">
+<title>model.BodyPart</title>
+<g id="a_node20"><a xlink:title="body_part            ------------------------------body_part_description=&quot;&quot; ">
+<polygon fill="#000000" fill-opacity="0.125490" stroke="none" points="598.38,-293.6 512.62,-293.6 512.62,-259.04 598.38,-259.04 598.38,-293.6"/>
+<text xml:space="preserve" text-anchor="start" x="520.62" y="-273.82" font-family="arial" text-decoration="underline" font-size="10.00">model.BodyPart</text>
+</a>
+</g>
+</g>
+<!-- model.BodyPart&#45;&gt;model.Model.BodyPart -->
+<g id="edge26" class="edge">
+<title>model.BodyPart-&gt;model.Model.BodyPart</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M570.9,-259.07C583.82,-245.45 601.77,-226.52 612.16,-215.56"/>
+</g>
+<!-- pl.Scan&#45;&gt;model.DLCliveRecording -->
+<g id="edge27" class="edge">
+<title>pl.Scan-&gt;model.DLCliveRecording</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M1239.15,-399.84C1231.14,-389.06 1220.73,-375.07 1212.73,-364.32"/>
+</g>
+<!-- pl.Scan&#45;&gt;model.VideoRecordingNew -->
+<g id="edge28" class="edge">
+<title>pl.Scan-&gt;model.VideoRecordingNew</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M1279.81,-407.62C1314.63,-396.77 1374.45,-378.12 1418.03,-364.54"/>
+</g>
+<!-- model.Model -->
+<g id="node22" class="node">
+<title>model.Model</title>
+<g id="a_node22"><a xlink:title="model_name           ------------------------------task                 date                 iteration            snapshotindex        shuffle              trainingsetindex     scorer               config_template      project_path         model_prefix=&quot;&quot;      model_description=&quot;&quot; → [nullable] pl.train.TrainingParamSetUNIQUE INDEX (task, date, iteration, shuffle, snapshotindex, trainingsetindex)">
+<polygon fill="#00ff00" fill-opacity="0.188235" stroke="#00ff00" stroke-opacity="0.188235" points="895,-364.16 810,-364.16 810,-329.6 895,-329.6 895,-364.16"/>
+<text xml:space="preserve" text-anchor="start" x="818" y="-343.61" font-family="arial" text-decoration="underline" font-size="12.00" fill="darkgreen">model.Model</text>
+</a>
+</g>
+</g>
+<!-- model.Model&#45;&gt;`lab_model`.`d_l_c_live_pose_estimation_task_new` -->
+<g id="edge29" class="edge">
+<title>model.Model-&gt;`lab_model`.`d_l_c_live_pose_estimation_task_new`</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M895.17,-337.47C949.8,-326.71 1045.73,-307.81 1115.51,-294.06"/>
+</g>
+<!-- model.Model&#45;&gt;model.DLCLivePoseEstimationTask -->
+<g id="edge30" class="edge">
+<title>model.Model-&gt;model.DLCLivePoseEstimationTask</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M868.48,-329.28C878.85,-318.5 892.32,-304.51 902.67,-293.76"/>
+</g>
+<!-- model.Model&#45;&gt;model.PoseEstimationTask -->
+<g id="edge31" class="edge">
+<title>model.Model-&gt;model.PoseEstimationTask</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M809.72,-339.92C743.84,-330.65 613.64,-311.92 503.5,-293.6 500.71,-293.14 497.87,-292.66 495.01,-292.17"/>
+</g>
+<!-- model.Model&#45;&gt;model.Model.BodyPart -->
+<g id="edge32" class="edge">
+<title>model.Model-&gt;model.Model.BodyPart</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M838.04,-329.42C818.23,-307.19 783.32,-269.15 767.5,-259.04 734.3,-237.81 691.35,-223.82 660.46,-215.71"/>
+</g>
+<!-- model.ModelEvaluation -->
+<g id="node33" class="node">
+<title>model.ModelEvaluation</title>
+<g id="a_node33"><a xlink:title="→ model.Model------------------------------train_iterations     train_error=null     test_error=null      p_cutoff=null        train_error_p=null   test_error_p=null    ">
+<ellipse fill="#ff0000" fill-opacity="0.125490" stroke="#ff0000" stroke-opacity="0.125490" cx="687.5" cy="-276.32" rx="12.96" ry="12.96"/>
+<text xml:space="preserve" text-anchor="middle" x="687.5" y="-272.05" font-family="arial" font-size="12.00" fill="#7f0000" fill-opacity="0.627451">model.ModelEvaluation</text>
+</a>
+</g>
+</g>
+<!-- model.Model&#45;&gt;model.ModelEvaluation -->
+<g id="edge33" class="edge">
+<title>model.Model-&gt;model.ModelEvaluation</title>
+<path fill="none" stroke="#000000" stroke-width="2" stroke-opacity="0.250980" d="M812.14,-329.11C774.93,-313.65 722.09,-291.69 699.02,-282.11"/>
+</g>
+<!-- model.PoseEstimationTaskNew -->
+<g id="node35" class="node">
+<title>model.PoseEstimationTaskNew</title>
+<g id="a_node35"><a xlink:title="→ model.VideoRecordingNew→ model.Model------------------------------task_mode=&quot;load&quot;     pose_estimation_output_dir=&quot;&quot; pose_estimation_params=null ">
+<polygon fill="#00ff00" fill-opacity="0.188235" stroke="#00ff00" stroke-opacity="0.188235" points="1564.25,-293.6 1378.75,-293.6 1378.75,-259.04 1564.25,-259.04 1564.25,-293.6"/>
+<text xml:space="preserve" text-anchor="middle" x="1471.5" y="-272.05" font-family="arial" font-size="12.00" fill="darkgreen">model.PoseEstimationTaskNew</text>
+</a>
+</g>
+</g>
+<!-- model.Model&#45;&gt;model.PoseEstimationTaskNew -->
+<g id="edge34" class="edge">
+<title>model.Model-&gt;model.PoseEstimationTaskNew</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M895.49,-342.37C984.25,-334.95 1194.16,-316.44 1369.5,-293.6 1372.43,-293.22 1375.41,-292.82 1378.42,-292.4"/>
+</g>
+<!-- disk.DISKModel -->
+<g id="node24" class="node">
+<title>disk.DISKModel</title>
+<g id="a_node24"><a xlink:title="disk_model_name      ------------------------------model_path           model_description=&quot;&quot; data_type            n_keypoints          seq_length           network_type         ">
+<polygon fill="#000000" fill-opacity="0.125490" stroke="none" points="1774.12,-223.04 1686.88,-223.04 1686.88,-188.48 1774.12,-188.48 1774.12,-223.04"/>
+<text xml:space="preserve" text-anchor="start" x="1694.88" y="-203.26" font-family="arial" text-decoration="underline" font-size="10.00">disk.DISKModel</text>
+</a>
+</g>
+</g>
+<!-- disk.DISKModel&#45;&gt;disk.DLCImputationTask -->
+<g id="edge35" class="edge">
+<title>disk.DISKModel-&gt;disk.DLCImputationTask</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M1730.5,-188.51C1730.5,-177.74 1730.5,-163.65 1730.5,-152.81"/>
+</g>
+<!-- pupil_tracking.PupilEllipseParameter -->
+<g id="node26" class="node">
+<title>pupil_tracking.PupilEllipseParameter</title>
+<g id="a_node26"><a xlink:title="parameter_id         ------------------------------likelihood_thres     exclude_ir_std       ellipticity_thres    description          ">
+<polygon fill="#000000" fill-opacity="0.125490" stroke="none" points="2005,-223.04 1830,-223.04 1830,-188.48 2005,-188.48 2005,-223.04"/>
+<text xml:space="preserve" text-anchor="start" x="1838" y="-203.26" font-family="arial" text-decoration="underline" font-size="10.00">pupil_tracking.PupilEllipseParameter</text>
+</a>
+</g>
+</g>
+<!-- pupil_tracking.PupilEllipseParameter&#45;&gt;pupil_tracking.PupilEllipseFitting -->
+<g id="edge36" class="edge">
+<title>pupil_tracking.PupilEllipseParameter-&gt;pupil_tracking.PupilEllipseFitting</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M1917.5,-188.51C1917.5,-176 1917.5,-159.01 1917.5,-147.83"/>
+</g>
+<!-- model.DLCLivePoseEstimation&#45;&gt;model.DLCLivePoseEstimation.BodyPartPosition -->
+<g id="edge37" class="edge">
+<title>model.DLCLivePoseEstimation-&gt;model.DLCLivePoseEstimation.BodyPartPosition</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M842.08,-200.16C814.24,-188.93 742.46,-159.98 705.78,-145.19"/>
+</g>
+<!-- pl.train.TrainingParamSet -->
+<g id="node28" class="node">
+<title>pl.train.TrainingParamSet</title>
+<g id="a_node28"><a xlink:title="paramset_idx         ------------------------------paramset_desc        param_set_hash       params               UNIQUE INDEX (param_set_hash)">
+<polygon fill="#000000" fill-opacity="0.125490" stroke="none" points="915.62,-434.72 789.38,-434.72 789.38,-400.16 915.62,-400.16 915.62,-434.72"/>
+<text xml:space="preserve" text-anchor="start" x="797.38" y="-414.94" font-family="arial" text-decoration="underline" font-size="10.00">pl.train.TrainingParamSet</text>
+</a>
+</g>
+</g>
+<!-- pl.train.TrainingParamSet&#45;&gt;model.Model -->
+<g id="edge38" class="edge">
+<title>pl.train.TrainingParamSet-&gt;model.Model</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-dasharray="5,2" stroke-opacity="0.250980" d="M852.5,-400.19C852.5,-389.42 852.5,-375.33 852.5,-364.49"/>
+</g>
+<!-- disk.DLCImputation&#45;&gt;disk.DLCImputation.BodyPartPositionDISK -->
+<g id="edge39" class="edge">
+<title>disk.DLCImputation-&gt;disk.DLCImputation.BodyPartPositionDISK</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M1166.78,-66.74C1104.19,-60.76 826.05,-34.18 677.6,-19.99"/>
+</g>
+<!-- model.VideoRecordingNew&#45;&gt;model.VideoRecordingNew.File -->
+<g id="edge40" class="edge">
+<title>model.VideoRecordingNew-&gt;model.VideoRecordingNew.File</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M1553.32,-329.81C1622.43,-316.23 1718.85,-297.29 1774.98,-286.26"/>
+</g>
+<!-- model.VideoRecordingNew&#45;&gt;model.RecordingInfoNew -->
+<g id="edge41" class="edge">
+<title>model.VideoRecordingNew-&gt;model.RecordingInfoNew</title>
+<path fill="none" stroke="#000000" stroke-width="2" stroke-opacity="0.250980" d="M1553.18,-336.77C1640.49,-326.87 1782.92,-310.22 1905.5,-293.6 1917.06,-292.03 1929.29,-290.28 1941.22,-288.52"/>
+</g>
+<!-- model.VideoRecordingNew&#45;&gt;model.PoseEstimationTaskNew -->
+<g id="edge42" class="edge">
+<title>model.VideoRecordingNew-&gt;model.PoseEstimationTaskNew</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M1471.5,-329.28C1471.5,-318.5 1471.5,-304.51 1471.5,-293.76"/>
+</g>
+<!-- model.PoseEstimationTaskNew&#45;&gt;pupil_tracking.PoseEstimationNew -->
+<g id="edge43" class="edge">
+<title>model.PoseEstimationTaskNew-&gt;pupil_tracking.PoseEstimationNew</title>
+<path fill="none" stroke="#000000" stroke-width="2" stroke-opacity="0.250980" d="M1475.13,-258.72C1477.87,-246.2 1481.56,-229.34 1483.98,-218.27"/>
+</g>
+</g>
+</svg>

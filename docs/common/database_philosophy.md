@@ -19,6 +19,21 @@ The operating conditions are:
 
 Without a strict dependency graph and machine-readable keys, this system becomes un-auditable and non-reproducible.
 
+## Moser-style principles (adapted)
+
+The philosophy inherited from the Moser pipeline lineage can be summarized as:
+
+1. Ontology before algorithms
+   - Define experimental structure (`session`, `scan`, `trial`, `event`) before feature extraction.
+2. Keys before convenience
+   - Keep stable key grammar even when notebooks evolve.
+3. Labels are contracts
+   - Shared vocabularies (event/trial types) should be explicit and reusable across users and projects.
+4. Provenance is part of the result
+   - A value without lineage is not analysis-ready.
+5. Diagrams are executable thinking tools
+   - Use dependency diagrams to reason about joins and compute order, not just for documentation.
+
 ## Reference-Pipeline Reasons (rewritten for ADAMACS)
 
 Reference pipeline docs emphasize that database pipelines are needed to manage large and complex table networks, support multiple user roles, and make it possible to extend workflows to new hardware/data types while preserving structure.

@@ -1,0 +1,213 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1099pt" height="519pt" viewBox="0.00 0.00 1099.00 519.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 515.2)">
+<polygon fill="white" stroke="none" points="-4,4 -4,-515.2 1095.38,-515.2 1095.38,4 -4,4"/>
+<!-- `lab_virtual_markers_optitrack`.`__rigid_body_tracking` -->
+<g id="node1" class="node">
+<title>`lab_virtual_markers_optitrack`.`__rigid_body_tracking`</title>
+<ellipse fill="#ff0000" fill-opacity="0.125490" stroke="#ff0000" stroke-opacity="0.125490" cx="623.88" cy="-12.96" rx="12.96" ry="12.96"/>
+<text xml:space="preserve" text-anchor="middle" x="623.88" y="-8.69" font-family="arial" font-size="12.00" fill="#7f0000" fill-opacity="0.627451">`lab_virtual_markers_optitrack`.`__rigid_body_tracking`</text>
+</g>
+<!-- mocap.MocapRecording -->
+<g id="node2" class="node">
+<title>mocap.MocapRecording</title>
+<g id="a_node2"><a xlink:title="→ pl.Scan------------------------------→ equipment.Device">
+<polygon fill="#00ff00" fill-opacity="0.188235" stroke="#00ff00" stroke-opacity="0.188235" points="625.12,-299.52 478.62,-299.52 478.62,-264.96 625.12,-264.96 625.12,-299.52"/>
+<text xml:space="preserve" text-anchor="middle" x="551.88" y="-277.97" font-family="arial" font-size="12.00" fill="darkgreen">mocap.MocapRecording</text>
+</a>
+</g>
+</g>
+<!-- mocap.MotionCaptureTask -->
+<g id="node12" class="node">
+<title>mocap.MotionCaptureTask</title>
+<g id="a_node12"><a xlink:title="→ mocap.MocapRecording→ mocap.Mocap------------------------------csv_path=&quot;&quot;          ">
+<polygon fill="#00ff00" fill-opacity="0.188235" stroke="#00ff00" stroke-opacity="0.188235" points="628.12,-228.96 469.62,-228.96 469.62,-194.4 628.12,-194.4 628.12,-228.96"/>
+<text xml:space="preserve" text-anchor="middle" x="548.88" y="-207.41" font-family="arial" font-size="12.00" fill="darkgreen">mocap.MotionCaptureTask</text>
+</a>
+</g>
+</g>
+<!-- mocap.MocapRecording&#45;&gt;mocap.MotionCaptureTask -->
+<g id="edge1" class="edge">
+<title>mocap.MocapRecording-&gt;mocap.MotionCaptureTask</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M551.15,-264.64C550.68,-253.86 550.06,-239.87 549.59,-229.12"/>
+</g>
+<!-- mocap.MotionCapture.TrackingPosition -->
+<g id="node3" class="node">
+<title>mocap.MotionCapture.TrackingPosition</title>
+<g id="a_node3"><a xlink:title="→ mocap.MotionCapture→ mocap.Mocap.TrackingId------------------------------frame_index          timestamps           x_pos                y_pos                z_pos                INDEX (frame_index)INDEX (timestamps)INDEX (x_pos)INDEX (y_pos)INDEX (z_pos)">
+<polygon fill="none" stroke="none" points="344.75,-84.88 157,-84.88 157,-64.88 344.75,-64.88 344.75,-84.88"/>
+<text xml:space="preserve" text-anchor="middle" x="250.88" y="-71.38" font-family="arial" font-size="10.00">mocap.MotionCapture.TrackingPosition</text>
+</a>
+</g>
+</g>
+<!-- mocap.MotionCapture.TrackingPosition&#45;&gt;`lab_virtual_markers_optitrack`.`__rigid_body_tracking` -->
+<g id="edge2" class="edge">
+<title>mocap.MotionCapture.TrackingPosition-&gt;`lab_virtual_markers_optitrack`.`__rigid_body_tracking`</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M306.72,-64.91C395.73,-50.61 564.55,-23.49 611.49,-15.95"/>
+</g>
+<!-- pupil_tracking.PupilRotationOptiTrack -->
+<g id="node4" class="node">
+<title>pupil_tracking.PupilRotationOptiTrack</title>
+<g id="a_node4"><a xlink:title="→ pupil_tracking.PupilEllipseFittingFreeMoving→ pupil_tracking.EyeCamTimeSource------------------------------theta_opt            phi_opt              diameter_opt         ">
+<ellipse fill="#ff0000" fill-opacity="0.125490" stroke="#ff0000" stroke-opacity="0.125490" cx="426.88" cy="-141.12" rx="12.96" ry="12.96"/>
+<text xml:space="preserve" text-anchor="middle" x="426.88" y="-136.84" font-family="arial" font-size="12.00" fill="#7f0000" fill-opacity="0.627451">pupil_tracking.PupilRotationOptiTrack</text>
+</a>
+</g>
+</g>
+<!-- pupil_tracking.GazeReconstruction3D -->
+<g id="node5" class="node">
+<title>pupil_tracking.GazeReconstruction3D</title>
+<g id="a_node5"><a xlink:title="→ pupil_tracking.PupilRotationOptiTrack→ pupil_tracking.TorsionCalibManual→ pupil_tracking.RigidMouseTracking→ pupil_tracking.EyeModel------------------------------gaze_in_head         gaze_in_space        torsion              ">
+<ellipse fill="#ff0000" fill-opacity="0.125490" stroke="#ff0000" stroke-opacity="0.125490" cx="540.88" cy="-74.88" rx="12.96" ry="12.96"/>
+<text xml:space="preserve" text-anchor="middle" x="540.88" y="-70.6" font-family="arial" font-size="12.00" fill="#7f0000" fill-opacity="0.627451">pupil_tracking.GazeReconstruction3D</text>
+</a>
+</g>
+</g>
+<!-- pupil_tracking.PupilRotationOptiTrack&#45;&gt;pupil_tracking.GazeReconstruction3D -->
+<g id="edge3" class="edge">
+<title>pupil_tracking.PupilRotationOptiTrack-&gt;pupil_tracking.GazeReconstruction3D</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M437.4,-134.19C459,-122.02 508.18,-94.3 530.05,-81.98"/>
+</g>
+<!-- virtual_markers_optitrack.EyeNoseCamPosCalib -->
+<g id="node6" class="node">
+<title>virtual_markers_optitrack.EyeNoseCamPosCalib</title>
+<g id="a_node6"><a xlink:title="→ pl.Subject------------------------------eye_left             eye_right            nose                 world_cam            ">
+<polygon fill="#00ff00" fill-opacity="0.188235" stroke="#00ff00" stroke-opacity="0.188235" points="1091.38,-228.96 814.38,-228.96 814.38,-194.4 1091.38,-194.4 1091.38,-228.96"/>
+<text xml:space="preserve" text-anchor="middle" x="952.88" y="-207.41" font-family="arial" font-size="12.00" fill="darkgreen">virtual_markers_optitrack.EyeNoseCamPosCalib</text>
+</a>
+</g>
+</g>
+<!-- virtual_markers_optitrack.EyeNoseCamPosCalib&#45;&gt;`lab_virtual_markers_optitrack`.`__rigid_body_tracking` -->
+<g id="edge4" class="edge">
+<title>virtual_markers_optitrack.EyeNoseCamPosCalib-&gt;`lab_virtual_markers_optitrack`.`__rigid_body_tracking`</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M924.82,-193.91C855.67,-152.56 679.39,-47.15 634.43,-20.27"/>
+</g>
+<!-- pupil_tracking.RigidMouseTracking -->
+<g id="node8" class="node">
+<title>pupil_tracking.RigidMouseTracking</title>
+<g id="a_node8"><a xlink:title="→ pl.Scan→ virtual_markers_optitrack.EyeNoseCamPosCalib→ mocap.MotionCaptureTask------------------------------pivot_eye_center_global yaw                  pitch                roll                 q_x                  q_y                  q_z                  q_w                  eye_left_global      eye_right_global     nose_global          world_cam_global     ">
+<ellipse fill="#ff0000" fill-opacity="0.125490" stroke="#ff0000" stroke-opacity="0.125490" cx="655.88" cy="-141.12" rx="12.96" ry="12.96"/>
+<text xml:space="preserve" text-anchor="middle" x="655.88" y="-136.84" font-family="arial" font-size="12.00" fill="#7f0000" fill-opacity="0.627451">pupil_tracking.RigidMouseTracking</text>
+</a>
+</g>
+</g>
+<!-- virtual_markers_optitrack.EyeNoseCamPosCalib&#45;&gt;pupil_tracking.RigidMouseTracking -->
+<g id="edge5" class="edge">
+<title>virtual_markers_optitrack.EyeNoseCamPosCalib-&gt;pupil_tracking.RigidMouseTracking</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M880.22,-193.91C808.09,-177.26 703.33,-153.08 668.02,-144.92"/>
+</g>
+<!-- mocap.MotionCapture -->
+<g id="node7" class="node">
+<title>mocap.MotionCapture</title>
+<g id="a_node7"><a xlink:title="→ mocap.MotionCaptureTask------------------------------import_time          ">
+<ellipse fill="#ff0000" fill-opacity="0.125490" stroke="#ff0000" stroke-opacity="0.125490" cx="66.88" cy="-141.12" rx="12.96" ry="12.96"/>
+<text xml:space="preserve" text-anchor="middle" x="66.88" y="-136.84" font-family="arial" font-size="12.00" fill="#7f0000" fill-opacity="0.627451">mocap.MotionCapture</text>
+</a>
+</g>
+</g>
+<!-- mocap.MotionCapture&#45;&gt;mocap.MotionCapture.TrackingPosition -->
+<g id="edge6" class="edge">
+<title>mocap.MotionCapture-&gt;mocap.MotionCapture.TrackingPosition</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M78.66,-136C108.01,-125.76 184.88,-98.92 225.26,-84.82"/>
+</g>
+<!-- pupil_tracking.RigidMouseTracking&#45;&gt;pupil_tracking.GazeReconstruction3D -->
+<g id="edge7" class="edge">
+<title>pupil_tracking.RigidMouseTracking-&gt;pupil_tracking.GazeReconstruction3D</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M645.26,-134.19C623.35,-121.95 573.35,-94.02 551.46,-81.79"/>
+</g>
+<!-- pl.Session -->
+<g id="node9" class="node">
+<title>pl.Session</title>
+<g id="a_node9"><a xlink:title="session_id           ------------------------------→ pl.Subjectsession_datetime     ">
+<polygon fill="#00ff00" fill-opacity="0.188235" stroke="#00ff00" stroke-opacity="0.188235" points="725,-440.64 652.75,-440.64 652.75,-406.08 725,-406.08 725,-440.64"/>
+<text xml:space="preserve" text-anchor="middle" x="688.88" y="-419.09" font-family="arial" font-size="12.00" fill="darkgreen">pl.Session</text>
+</a>
+</g>
+</g>
+<!-- pl.Scan -->
+<g id="node11" class="node">
+<title>pl.Scan</title>
+<g id="a_node11"><a xlink:title="→ pl.Sessionscan_id              ------------------------------→ [nullable] pl.Device→ scan.AcquisitionSoftwarescan_notes=&quot;&quot;        ">
+<polygon fill="#00ff00" fill-opacity="0.188235" stroke="#00ff00" stroke-opacity="0.188235" points="675.12,-370.08 618.62,-370.08 618.62,-335.52 675.12,-335.52 675.12,-370.08"/>
+<text xml:space="preserve" text-anchor="start" x="626.62" y="-349.53" font-family="arial" text-decoration="underline" font-size="12.00" fill="darkgreen">pl.Scan</text>
+</a>
+</g>
+</g>
+<!-- pl.Session&#45;&gt;pl.Scan -->
+<g id="edge8" class="edge">
+<title>pl.Session-&gt;pl.Scan</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M678.71,-405.76C672.1,-394.98 663.53,-380.99 656.95,-370.24"/>
+</g>
+<!-- pupil_tracking.TorsionCalibManual -->
+<g id="node10" class="node">
+<title>pupil_tracking.TorsionCalibManual</title>
+<g id="a_node10"><a xlink:title="→ pl.Subject------------------------------param_coeff          param_intercept      ">
+<polygon fill="#00ff00" fill-opacity="0.188235" stroke="#00ff00" stroke-opacity="0.188235" points="894.5,-370.08 693.25,-370.08 693.25,-335.52 894.5,-335.52 894.5,-370.08"/>
+<text xml:space="preserve" text-anchor="middle" x="793.88" y="-348.53" font-family="arial" font-size="12.00" fill="darkgreen">pupil_tracking.TorsionCalibManual</text>
+</a>
+</g>
+</g>
+<!-- pupil_tracking.TorsionCalibManual&#45;&gt;pupil_tracking.GazeReconstruction3D -->
+<g id="edge9" class="edge">
+<title>pupil_tracking.TorsionCalibManual-&gt;pupil_tracking.GazeReconstruction3D</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M797.71,-335.14C806.21,-293.53 821.82,-184.04 766.88,-123.84 737.67,-91.84 596.86,-79.7 553.56,-76.68"/>
+</g>
+<!-- pl.Scan&#45;&gt;mocap.MocapRecording -->
+<g id="edge10" class="edge">
+<title>pl.Scan-&gt;mocap.MocapRecording</title>
+<path fill="none" stroke="#000000" stroke-width="2" stroke-opacity="0.250980" d="M623.88,-335.2C609.05,-324.5 589.84,-310.64 574.99,-299.92"/>
+</g>
+<!-- pl.Scan&#45;&gt;pupil_tracking.RigidMouseTracking -->
+<g id="edge11" class="edge">
+<title>pl.Scan-&gt;pupil_tracking.RigidMouseTracking</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M647.58,-335.35C649.33,-294.51 653.85,-189.26 655.37,-153.9"/>
+</g>
+<!-- mocap.MotionCaptureTask&#45;&gt;mocap.MotionCapture -->
+<g id="edge12" class="edge">
+<title>mocap.MotionCaptureTask-&gt;mocap.MotionCapture</title>
+<path fill="none" stroke="#000000" stroke-width="2" stroke-opacity="0.250980" d="M469.23,-202.4C387.16,-193.41 255.65,-177.71 142.88,-158.4 120.26,-154.53 94.17,-148.62 79.19,-145.09"/>
+</g>
+<!-- mocap.MotionCaptureTask&#45;&gt;pupil_tracking.RigidMouseTracking -->
+<g id="edge13" class="edge">
+<title>mocap.MotionCaptureTask-&gt;pupil_tracking.RigidMouseTracking</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M575.05,-193.91C597.82,-179.32 629.61,-158.95 645.69,-148.64"/>
+</g>
+<!-- pl.Subject -->
+<g id="node13" class="node">
+<title>pl.Subject</title>
+<g id="a_node13"><a xlink:title="subject              ------------------------------earmark              sex                  birth_date           death_date=null      generation=&quot;&quot;        parent_ids           → pl.Experimenter.proj(owner_id=&quot;user_id&quot;)→ pl.Experimenter.proj(responsible_id=&quot;user_id&quot;)→ subject.Line→ subject.Protocol">
+<polygon fill="#00ff00" fill-opacity="0.188235" stroke="#00ff00" stroke-opacity="0.188235" points="828.5,-511.2 759.25,-511.2 759.25,-476.64 828.5,-476.64 828.5,-511.2"/>
+<text xml:space="preserve" text-anchor="start" x="767.25" y="-490.65" font-family="arial" text-decoration="underline" font-size="12.00" fill="darkgreen">pl.Subject</text>
+</a>
+</g>
+</g>
+<!-- pl.Subject&#45;&gt;virtual_markers_optitrack.EyeNoseCamPosCalib -->
+<g id="edge14" class="edge">
+<title>pl.Subject-&gt;virtual_markers_optitrack.EyeNoseCamPosCalib</title>
+<path fill="none" stroke="#000000" stroke-width="2" stroke-opacity="0.250980" d="M812.94,-476.52C837.31,-454.58 879.3,-413.4 903.88,-370.08 930.71,-322.78 944.7,-258.99 950.13,-229.24"/>
+</g>
+<!-- pl.Subject&#45;&gt;pl.Session -->
+<g id="edge15" class="edge">
+<title>pl.Subject-&gt;pl.Session</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-dasharray="5,2" stroke-opacity="0.250980" d="M768.19,-476.15C751.8,-465.44 730.64,-451.63 714.3,-440.96"/>
+</g>
+<!-- pl.Subject&#45;&gt;pupil_tracking.TorsionCalibManual -->
+<g id="edge16" class="edge">
+<title>pl.Subject-&gt;pupil_tracking.TorsionCalibManual</title>
+<path fill="none" stroke="#000000" stroke-width="2" stroke-opacity="0.250980" d="M793.88,-476.41C793.88,-449.64 793.88,-397.04 793.88,-370.28"/>
+</g>
+<!-- pupil_tracking.EyeModel -->
+<g id="node14" class="node">
+<title>pupil_tracking.EyeModel</title>
+<g id="a_node14"><a xlink:title="eye_model_id         ------------------------------eye_model_azimuth    eye_model_elevation  reference            ">
+<polygon fill="#00ff00" fill-opacity="0.188235" stroke="#00ff00" stroke-opacity="0.188235" points="299.88,-158.4 151.88,-158.4 151.88,-123.84 299.88,-123.84 299.88,-158.4"/>
+<text xml:space="preserve" text-anchor="start" x="159.88" y="-137.84" font-family="arial" text-decoration="underline" font-size="12.00" fill="darkgreen">pupil_tracking.EyeModel</text>
+</a>
+</g>
+</g>
+<!-- pupil_tracking.EyeModel&#45;&gt;pupil_tracking.GazeReconstruction3D -->
+<g id="edge17" class="edge">
+<title>pupil_tracking.EyeModel-&gt;pupil_tracking.GazeReconstruction3D</title>
+<path fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.250980" d="M300.13,-124.98C377.07,-109.29 491.2,-86.01 528.55,-78.39"/>
+</g>
+</g>
+</svg>

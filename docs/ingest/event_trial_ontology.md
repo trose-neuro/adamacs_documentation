@@ -4,6 +4,17 @@ This page adapts the DataJoint Element Event ontology to ADAMACS usage.
 
 Reference: [Element Event concepts](https://docs.datajoint.com/elements/element-event/0.2/concepts/).
 
+## Moser-style mindset (adapted to ADAMACS)
+
+The core idea is simple: define time ontology first, then run analysis.
+
+In practice:
+- first agree on what counts as a session, scan, block, trial, and event
+- encode those concepts in tables and keys
+- only then compute features, train models, and compare conditions
+
+This is why ADAMACS treats event/trial structure as core infrastructure, not as notebook-side convenience.
+
 ## Why this matters
 
 Most ingest/debug issues in behavior synchronization come from unclear timing ontology.
@@ -23,22 +34,53 @@ Use this page when validating `event.Event` and `trial.Trial` population.
 | Optional blocking | `trial.Block`, `trial.BlockTrial` | Block-level grouping (optional) |
 | Analysis window spec | `event.AlignmentEvent` | Event-locked windows for downstream analysis |
 
-## ASCII timeline
+## Expanded labeled timeline (adapted)
+
+This extends the Element Event conceptual timeline with ADAMACS labels used in practice.
 
 ```text
-|----------------------------------------------------------------------------------|
-|------------------------------- Session (session_id) -----------------------------|
-|---------------------- Recording (BehaviorRecording context) ---------------------|
-|------ Block 1 ------|______________|------ Block 2 ------|______________________|
-|-- Trial 1 --||-- Trial 2 --|______|-- Trial 3 --||-- Trial 4 --|_______________|
-| e(aux_cam) | e(raw_bpod_trial_start) | e(optitrack_frames) | e(raw_bpod_reward) |
-|----------------------------------------------------------------------------------|
+|------------------------ behavior.Procedure 1 (session-bound) ------------------------|_____|------- behavior.Procedure 2 (cross-session labels) -------|
+|-------------------------------------------- Session 1 --------------------------------------------|______________________________|------------- Session 2 -------------|
+|---------------------------- Scan 1 ----------------------------|__|--------- Scan 2 ---------|_______________________________________|--------- Scan 1 ---------|__|---- Scan 2 ----|
+|----- Block 1 -----|______|----- Block 2 -----|______|----- Block 3 -----|
+| Trial 1 || Trial 2 |____| Trial 3 || Trial 4 |____| Trial 5 |____| Trial 6 |
+|_|e1|_|e2||e3|_|e4|__|e5|__|e6||e7||e8||e9||e10||e11|____|e12||e13|______|
 ```
 
 Interpretation:
-- Trials are intervals.
-- Events are points or spans on the same recording clock.
-- `TrialEvent` links events that fall inside each trial window.
+- Procedure labels are conceptual groupings:
+  - session-bound variants usually map to session metadata + trial/event labels
+  - cross-session variants are shared label vocabularies (for example `trial.TrialType`, `event.EventType`)
+- `behavior.Procedure` in this timeline is a conceptual label, not a required core table in ADAMACS.
+- Scans are ingest units in ADAMACS and are commonly used as restrictions (`scan_key`).
+- Blocks and trials are intervals; events are points/spans on the same recording clock.
+- `trial.TrialEvent` links event instances to trial windows.
+
+## Procedure labels in ADAMACS
+
+In the legacy Moser-style philosophy, procedures are part of the experimental grammar, not free text.
+ADAMACS mirrors this with two practical layers:
+
+- session-bound procedure context:
+  usually represented through session/recording metadata (`session.SessionNote`, `event.BehaviorRecording.recording_notes`) and scan-restricted event/trial rows
+- cross-session procedure vocabulary:
+  represented by stable label sets in `event.EventType` and `trial.TrialType`
+
+If the lab decides to add a dedicated `behavior.Procedure` lookup later, this ontology still holds:
+- the table should define shared vocabulary
+- session/scan/trial tables should carry the instance-level links
+
+## Label mapping in ADAMACS
+
+| Timeline label | Where to store/restrict |
+| --- | --- |
+| Procedure (session-bound) | `session.Session*`, scan restrictions, `recording_notes`, session notes |
+| Procedure (cross-session) | `trial.TrialType`, `event.EventType` |
+| Session | `session_id` |
+| Scan | `scan_id` (use `scan_key`) |
+| Block | `trial.Block` (optional) |
+| Trial | `trial.Trial` |
+| Event (`e1`, `e2`, ...) | `event.Event` with `event_type` |
 
 ## Graph visualization
 
@@ -96,6 +138,40 @@ erDiagram
 - `event.Event.event_start_time` and `event.Event.event_end_time` are in seconds relative to recording start.
 - `trial.Trial.trial_start_time` and `trial.Trial.trial_stop_time` are also on the same recording-time axis.
 - `trial.TrialEvent` is the bridge table used for event-in-trial analyses.
+- Typical ADAMACS restrictions use `session_id` + `scan_id` (`scan_key`).
+
+## Table-level reference (core)
+
+| Table | Primary key shape | Key attributes used most often |
+| --- | --- | --- |
+| `event.EventType` | `event_type` | `event_type_description` |
+| `event.BehaviorRecording` | `-> Session` | `recording_start_time`, `recording_duration`, `recording_notes` |
+| `event.BehaviorRecording.File` | `-> BehaviorRecording`, `filepath` | relative file path for recording source |
+| `event.Event` | `-> BehaviorRecording`, `-> EventType`, `event_start_time` | `event_end_time` |
+| `event.AlignmentEvent` | `alignment_name` | alignment/start/end event types with time shifts |
+| `trial.TrialType` | `trial_type` | `trial_type_description` |
+| `trial.Trial` | `-> event.BehaviorRecording`, `trial_id` | nullable `trial_type`, `trial_start_time`, `trial_stop_time` |
+| `trial.TrialEvent` | `-> trial.Trial`, `-> event.Event` | event membership of trials |
+| `trial.Block` | `-> event.BehaviorRecording`, `block_id` | `block_start_time`, `block_stop_time` |
+| `trial.BlockTrial` | `-> trial.Block`, `-> trial.Trial` | block membership of trials |
+
+Note:
+- In Element Event / Trial, many imported tables are populated via explicit inserts in ingest workflows (`allow_direct_insert=True` patterns are common).
+
+## `dj.Diagram` views (from `adamacs_analysis`)
+
+These are exported from `adamacs_analysis/notebooks/21_schema_dependency_diagrams.ipynb`.
+
+### Event schema
+
+![Event schema diagram](../assets/db_diagrams/event.svg)
+
+### Trial schema
+
+![Trial schema diagram](../assets/db_diagrams/trial.svg)
+
+These diagrams are not decoration.
+Use them as the dependency contract before writing downstream analysis joins.
 
 ## ADAMACS-specific conventions
 

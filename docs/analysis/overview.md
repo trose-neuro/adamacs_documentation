@@ -45,6 +45,7 @@ For every analysis figure/table, preserve:
 
 ## Related pages
 
+- `Analysis -> Database Structure`
 - `Analysis -> Notebook Map`
 - `Analysis -> Query Patterns`
 - `Analysis -> Schema Scaffolding`
