@@ -28,6 +28,9 @@ For GPU host:
 ssh <username>@172.25.70.3
 ```
 
+Detailed GPU usage policy and workflows:
+- `Infrastructure -> GPU Server Usage`
+
 ### SMB share (Windows)
 
 Use the network share endpoint provided by lab ops.

@@ -54,4 +54,4 @@ Reference: <https://docs.datajoint.com/elements/element-event/0.2/concepts/>
 - DataJoint query operators:
   <https://docs.datajoint.com/core/datajoint-python/latest/query/operators/>
 - ADAMACS ontology page:
-  `Ingest -> Event/Trial Ontology`
+  `Infrastructure -> Event/Trial Ontology`

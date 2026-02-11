@@ -102,7 +102,7 @@ Manual user populations can fail with filesystem permission errors even when DB 
 ## Event/trial ontology (ADAMACS-specific)
 
 Use the dedicated page:
-- `Ingest -> Event/Trial Ontology`
+- `Infrastructure -> Event/Trial Ontology`
 
 It contains:
 - ADAMACS table mapping for `event.*` and `trial.*`

@@ -124,7 +124,7 @@ Start most joins from these anchors:
 - `model_name` (pose/DLC)
 
 For event/trial-specific structure, see:
-- `Ingest -> Event/Trial Ontology`
+- `Infrastructure -> Event/Trial Ontology`
 
 ## Guardrails for analysis code
 

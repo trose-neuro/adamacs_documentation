@@ -42,7 +42,6 @@ Use `ingestgui_v2` first:
 ```{toctree}
 :maxdepth: 1
 
-event_trial_ontology
 batch_ingest
 modalities
 notebook_map

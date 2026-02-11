@@ -103,5 +103,5 @@ Defaults are read from `user_configs/<initials>.ini`.
 
 ## Related pages
 
-- `Ingest -> Event/Trial Ontology`
+- `Infrastructure -> Event/Trial Ontology`
 - `Ingest -> Modalities`
