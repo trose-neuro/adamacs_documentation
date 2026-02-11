@@ -15,9 +15,9 @@ Summary
 - Students can run many lightweight populations manually, but heavy/blob-writing jobs are worker-owned.
 
 Current server roles
-- MAIN_SERVER (172.25.64.3): DataJoint DB host, blob host, ingest share host, CPU worker host
-- GPU_SERVER (172.25.70.3): GPU workers + model training/evaluation host
-- BACKUP_SERVER (172.26.65.8): backup host (rsync pull + borg compression)
+- MAIN_SERVER (<MAIN_SERVER_IP>): DataJoint DB host, blob host, ingest share host, CPU worker host
+- GPU_SERVER (<GPU_SERVER_IP>): GPU workers + model training/evaluation host
+- BACKUP_SERVER (<BACKUP_SERVER_IP>): backup host (rsync pull + borg compression)
 
 ASCII overview
 [SETUPS + ACQUISITION PCs]

@@ -4,7 +4,7 @@ This page documents the current backup model centered on BACKUP_SERVER.
 
 ## Backup host
 
-- `BACKUP_SERVER` (`172.26.65.8`) is the backup server.
+- `BACKUP_SERVER` (`<BACKUP_SERVER_IP>`) is the backup server.
 
 ## What is backed up
 

@@ -5,13 +5,13 @@ This page documents practical usage of the lab GPU server for ADAMACS workflows.
 ## Server and connection
 
 - Host role: GPU compute server for model-heavy workloads (for example DLC, denoising, cascade)
-- Permanent IP: `172.25.70.3`
-- Legacy note: ignore older references to `172.25.70.6`
+- Permanent IP: `<GPU_SERVER_IP>`
+- Legacy note: ignore older references to `<OLD_GPU_SERVER_IP>`
 
 Connect via SSH:
 
 ```bash
-ssh <your_username>@172.25.70.3
+ssh <your_username>@<GPU_SERVER_IP>
 ```
 
 ## Account and security basics
@@ -42,7 +42,7 @@ The server is intended as a headless compute machine.
 
 Recommended:
 1. Develop GUI-heavy steps locally.
-2. Use VS Code Remote SSH or terminal SSH for execution on `172.25.70.3`.
+2. Use VS Code Remote SSH or terminal SSH for execution on `<GPU_SERVER_IP>`.
 3. Run Jupyter on the server only as needed, then shut it down.
 
 Official VS Code Remote SSH docs:
@@ -59,7 +59,7 @@ If remote GUI is unavoidable, use SSH X-forwarding.
 2. Connect with X-forwarding:
 
 ```bash
-ssh -X <your_username>@172.25.70.3
+ssh -X <your_username>@<GPU_SERVER_IP>
 ```
 
 3. Run your GUI app on the server (example shown for DLC).
@@ -74,13 +74,13 @@ python -m deeplabcut
 DeepLabCut docs:
 - <https://deeplabcut.github.io/DeepLabCut/>
 
-## DeepLabCut lab note (shared link)
+## DeepLabCut lab note (internal)
 
 Lab-specific walkthrough (with and without remote GUI):
-- <https://share.evernote.com/note/d9f6646d-8072-9e61-4e26-6cc67f216c05>
+- `<INTERNAL_LAB_NOTE_URL>`
 
 Note:
-- this link may require browser/session support not available in all environments.
+- request the current internal note URL from lab ops.
 
 ## Copy-paste email templates
 
@@ -89,11 +89,11 @@ Use these as quick templates for future communication.
 ### Access request template
 
 ```text
-Subject: GPU server account request (172.25.70.3)
+Subject: GPU server account request (<GPU_SERVER_IP>)
 
 Hello,
 
-Could you please create GPU server access for me on 172.25.70.3?
+Could you please create GPU server access for me on <GPU_SERVER_IP>?
 Preferred username: <username>
 Use case: <short use case, e.g. DeepLabCut training/inference for ADAMACS>
 
@@ -121,7 +121,7 @@ Best regards,
 ### Resource coordination template
 
 ```text
-Subject: Planned long GPU run on 172.25.70.3
+Subject: Planned long GPU run on <GPU_SERVER_IP>
 
 Hello,
 

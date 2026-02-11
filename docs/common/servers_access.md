@@ -2,16 +2,19 @@
 
 This page summarizes practical server access for ADAMACS users.
 
+Public-doc note:
+- internal endpoint values are redacted here; request current IPs/hostnames via lab ops private channels.
+
 ## Current server IPs
 
-- `MAIN_SERVER`: `172.25.64.3`
+- `MAIN_SERVER`: `<MAIN_SERVER_IP>`
   - primary DataJoint DB host
   - blob storage host
   - share host for ingest uploads
   - CPU worker host
-- `GPU_SERVER`: `172.25.70.3`
+- `GPU_SERVER`: `<GPU_SERVER_IP>`
   - GPU worker host for model-heavy pipelines
-- `BACKUP_SERVER`: `172.26.65.8`
+- `BACKUP_SERVER`: `<BACKUP_SERVER_IP>`
   - backup host (rsync pulls + borg)
 
 ## Primary access modes
@@ -19,13 +22,13 @@ This page summarizes practical server access for ADAMACS users.
 ### SSH
 
 ```bash
-ssh <username>@172.25.64.3
+ssh <username>@<MAIN_SERVER_IP>
 ```
 
 For GPU host:
 
 ```bash
-ssh <username>@172.25.70.3
+ssh <username>@<GPU_SERVER_IP>
 ```
 
 Detailed GPU usage policy and workflows:
@@ -38,7 +41,7 @@ Use the network share endpoint provided by lab ops.
 Typical pattern:
 
 ```text
-\\172.25.64.3\share
+\\<MAIN_SERVER_IP>\share
 ```
 
 (or map with `net use`).
@@ -71,13 +74,13 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 Copy public key to server:
 
 ```bash
-ssh-copy-id <username>@172.25.64.3
+ssh-copy-id <username>@<MAIN_SERVER_IP>
 ```
 
 Then test:
 
 ```bash
-ssh <username>@172.25.64.3
+ssh <username>@<MAIN_SERVER_IP>
 ```
 
 ## Standard upload path convention
@@ -101,7 +104,7 @@ jupyter lab --no-browser --port=8080
 Forward locally:
 
 ```bash
-ssh -L 8080:localhost:8080 <username>@172.25.64.3
+ssh -L 8080:localhost:8080 <username>@<MAIN_SERVER_IP>
 ```
 
 Open local browser:

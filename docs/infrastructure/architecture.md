@@ -2,21 +2,24 @@
 
 This is the current documented ADAMACS lab architecture for ingest and analysis operations.
 
+Public-doc note:
+- internal endpoint values are intentionally redacted here; request live values from lab ops.
+
 ## Server roles and IPs
 
-- `MAIN_SERVER` (`172.25.64.3`)
+- `MAIN_SERVER` (`<MAIN_SERVER_IP>`)
   - main DataJoint DB host
   - blob storage host
   - shared data upload host
   - CPU-side worker host
-- `GPU_SERVER` (`172.25.70.3`)
+- `GPU_SERVER` (`<GPU_SERVER_IP>`)
   - GPU worker host (DLC/model-heavy/denoising and related jobs)
   - model training and evaluation host (including MEI candidate generation/evaluation workflows)
-- `BACKUP_SERVER` (`172.26.65.8`)
+- `BACKUP_SERVER` (`<BACKUP_SERVER_IP>`)
   - backup host (pull backups + borg compression)
 
 Legacy note:
-- some historical scripts/docs still mention `172.26.128.53`.
+- some historical scripts/docs still mention `<LEGACY_MAIN_SERVER_IP>`.
 
 ## End-to-end dependency graph (PCs, servers, workers, and feedback loop)
 
@@ -42,7 +45,7 @@ flowchart TB
       S_H2["behavior2"]
     end
 
-    subgraph MAIN_SERVER["MAIN_SERVER 172.25.64.3"]
+    subgraph MAIN_SERVER["MAIN_SERVER MAIN_SERVER_IP"]
       SHARE["SMB/Linux share /datajoint-data/data/<user>"]
       CONS["Consolidation and naming"]
       ING["adamacs_ingest GUI and ingest notebooks"]
@@ -54,13 +57,13 @@ flowchart TB
       ANA["adamacs_analysis users and notebooks"]
     end
 
-    subgraph GPU["GPU_SERVER 172.25.70.3"]
+    subgraph GPU["GPU_SERVER GPU_SERVER_IP"]
       GPUW["GPU worker loops (DLC/denoise/cascade)"]
       TRAIN["Model training pipelines"]
       EVAL["Model evaluation and MEI candidate scoring"]
     end
 
-    subgraph BACKUP["BACKUP_SERVER 172.26.65.8"]
+    subgraph BACKUP["BACKUP_SERVER BACKUP_SERVER_IP"]
       RSYNC["Pull jobs (rsync from MAIN_SERVER)"]
       BORG["Borg archives zstd,22"]
     end

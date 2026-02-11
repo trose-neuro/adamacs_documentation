@@ -39,7 +39,7 @@ flowchart TB
       H2["behavior2"]
     end
 
-    subgraph MAIN_SERVER["MAIN_SERVER (172.25.64.3)"]
+    subgraph MAIN_SERVER["MAIN_SERVER (MAIN_SERVER_IP)"]
       SHARE["/datajoint-data/data/<user>"]
       ING["adamacs_ingest GUI + batch ingest"]
       DB["DataJoint DB"]
@@ -48,12 +48,12 @@ flowchart TB
       DUMP["DB dump outputs"]
     end
 
-    subgraph GPU["GPU_SERVER (172.25.70.3)"]
+    subgraph GPU["GPU_SERVER (GPU_SERVER_IP)"]
       GPUW["GPU worker loops"]
       TRAIN["Model training + evaluation"]
     end
 
-    subgraph BACKUP_SERVER["BACKUP_SERVER (172.26.65.8)"]
+    subgraph BACKUP_SERVER["BACKUP_SERVER (BACKUP_SERVER_IP)"]
       RSYNC["Pull backups"]
       BORG["borg zstd,22 archives"]
     end

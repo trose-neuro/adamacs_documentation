@@ -16,7 +16,7 @@ Both repos ship `Example_dj_local_conf.json` templates.
 
 ```json
 {
-  "database.host": "172.25.64.3",
+  "database.host": "<MAIN_SERVER_IP>",
   "database.user": "your_username",
   "database.password": "your_password",
   "database.port": 3306,
