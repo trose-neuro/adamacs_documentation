@@ -19,7 +19,7 @@
 
 /* Landing-page branding block */
 .landing-hero {
-  margin: 0.75rem 0 1.25rem 0;
+  margin: 1.5rem 0 1.25rem 0;
 }
 
 .troselab-link {
@@ -52,8 +52,8 @@
 .hero-slide {
   position: absolute;
   inset: 0;
-  width: 60%;
-  height: 60%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   opacity: 0;
   animation: heroFade 18s infinite ease-in-out;
