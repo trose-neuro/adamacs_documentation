@@ -21,11 +21,7 @@
 .landing-hero {
   margin: 0.75rem 0 1.25rem 0;
   /* make it ~60% of the screen height */
-  min-height: 60vh;
-
-  /* better behavior on mobile browser UI (optional but recommended) */
-  min-height: 60svh;
-
+  min-height: 40vh;
   /* keep content from being clipped */
   height: auto;
 }

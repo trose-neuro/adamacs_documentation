@@ -10,8 +10,8 @@ ADAMACS is informed by the Moser pipeline lineage, but all pages here use ADAMAC
   </a>
   <div class="hero-carousel" aria-label="Decorative Troselab microscopy banner">
     <img class="hero-slide hero-slide-1" src="_static/branding/troselab-banner.jpg" alt="Troselab banner microscopy collage"/>
-    <!-- <img class="hero-slide hero-slide-2" src="_static/branding/troselab-logo.jpg" alt="Troselab logo panel"/>
-    <img class="hero-slide hero-slide-3" src="_static/branding/troselab-g2.jpg" alt="Troselab decorative microscopy panel"/> -->
+    <img class="hero-slide hero-slide-2" src="_static/branding/troselab-logo.jpg" alt="Troselab logo panel"/>
+    <img class="hero-slide hero-slide-3" src="_static/branding/troselab-g2.jpg" alt="Troselab decorative microscopy panel"/>
   </div>
 </div>
 
