@@ -6,7 +6,7 @@ ADAMACS is informed by the Moser pipeline lineage, but all pages here use ADAMAC
 
 <div class="landing-hero">
   <a class="troselab-link" href="https://www.troselab.de" target="_blank" rel="noopener noreferrer">
-    Visit Troselab: www.troselab.de
+    visit Troselab: www.troselab.de
   </a>
   <div class="hero-carousel" aria-label="Decorative Troselab microscopy banner">
     <img class="hero-slide hero-slide-1" src="_static/branding/troselab-banner.jpg" alt="Troselab banner microscopy collage"/>
