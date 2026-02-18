@@ -5,13 +5,15 @@ This page is the shortest path from zero setup to first successful ingest + firs
 ## 1. Clone repositories side-by-side
 
 ADAMACS is used as two repos:
-- `adamacs_ingest` (ingest/task staging)
-- `adamacs_analysis` (querying/analysis notebooks)
+- `adamacs_ingest` (ingest/task staging) - CLONE
+- `adamacs_analysis` (querying/analysis notebooks) - FORK
+
+
 
 ```bash
 cd /path/to/workspace
 git clone https://github.com/SFB1089/adamacs_ingest.git
-git clone https://github.com/SFB1089/adamacs_analysis.git
+git clone https://github.com/YOUR-FORK/adamacs_analysis.git
 ```
 
 or (likely) when using ssh access:
@@ -19,7 +21,7 @@ or (likely) when using ssh access:
 ```bash
 cd /path/to/workspace
 git clone git@github.com:SFB1089/adamacs_ingest.git
-git clone git@github.com:SFB1089/adamacs_analysis.git
+git clone git@github.com:YOUR-FORK/adamacs_analysis.git
 ```
 
 ## 2. Install environment
