@@ -10,8 +10,16 @@ ADAMACS is used as two repos:
 
 ```bash
 cd /path/to/workspace
-git clone https://github.com/your-org/adamacs_ingest.git
-git clone https://github.com/your-org/adamacs_analysis.git
+git clone https://github.com/SFB1089/adamacs_ingest.git
+git clone https://github.com/SFB1089/adamacs_analysis.git
+```
+
+or (likely) when using ssh access:
+
+```bash
+cd /path/to/workspace
+git clone git@github.com:SFB1089/adamacs_ingest.git
+git clone git@github.com:SFB1089/adamacs_analysis.git
 ```
 
 ## 2. Install environment
