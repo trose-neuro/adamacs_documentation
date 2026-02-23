@@ -1,12 +1,15 @@
 # Welcome to ADAMACS documentation
 
+
+ADAMACS (Architectures for Data Management and Computational Support) is our framework for managing and analyzing complex multimodal datasets. Built around DataJoint-based pipeline management, it supports structured data storage, metadata integration, computational workflows, and reproducible processing across experiments.
+
 This site is the operational and analysis manual for ADAMACS.
 Use the section hubs below for fast navigation.
 ADAMACS is informed by the Moser pipeline lineage, but all pages here use ADAMACS-specific terminology and workflows.
 
 <div class="landing-hero">
   <a class="troselab-link" href="https://www.troselab.de" target="_blank" rel="noopener noreferrer">
-    visit www.troselab.de
+    www.troselab.de
   </a>
   <div class="hero-carousel" aria-label="Decorative Troselab microscopy banner">
     <img class="hero-slide hero-slide-1" src="_static/branding/troselab-banner.jpg" alt="Troselab banner microscopy collage"/>
