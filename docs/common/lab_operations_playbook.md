@@ -61,6 +61,36 @@ Versioning reminder:
 - There can be multiple extraction/curation versions for the same session/scan.
 - Always pin analysis to specific `curation_id` and parameter context.
 
+### CellReg assignment field (`roi_group`) under curation
+
+For cross-session cell identity alignment (CellReg-style mapping), use `imaging.Segmentation.Mask.roi_group`.
+
+- `roi_group` is the index used to match masks/cell groups across sessions.
+- It is intentionally **not** in the primary key so assignments can be corrected post hoc.
+- This should be handled during curation/QC before downstream analysis claims.
+
+When you need to update an assignment for an existing tuple, use DataJoint `update1` with a fully specified key:
+
+```python
+# Construct the key
+key = {
+    'session_id': 'sess9FS7X4NO',
+    'scan_id': 'scan9FS7X4NO',
+    'paramset_idx': 10,
+    'curation_id': 1,
+    'mask': 0,
+}
+
+# Set corrected CellReg group index
+new_roi_group = 2  # replace with desired group id
+
+# Update existing tuple
+imaging.Segmentation.Mask.update1(key, roi_group=new_roi_group)
+```
+
+Practical note:
+- For bulk imports from CellReg outputs, iterate over assignments and write `roi_group` per `(session_id, scan_id, paramset_idx, curation_id, mask)` key.
+
 ## 4) DLC naming convention
 
 Model naming in the database should use:
